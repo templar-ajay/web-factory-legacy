@@ -1,0 +1,48 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "height": 80
+          },
+          "thumbnails": []
+        }
+      },
+      "footer_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "Footer Text Color",
+          "placeholder": ""
+        }
+      },
+      "footer_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Footer Background Color",
+          "placeholder": ""
+        }
+      },
+      "company_name": {
+        "type": "Text",
+        "config": {
+          "label": "Company Name",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

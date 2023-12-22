@@ -1,0 +1,98 @@
+{
+  "id": "settings",
+  "label": "Settings",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "default_header": {
+        "type": "Link",
+        "config": {
+          "label": "Default Header",
+          "select": "document",
+          "customtypes": ["header"]
+        }
+      },
+      "default_footer": {
+        "type": "Link",
+        "config": {
+          "label": "Default Footer",
+          "select": "document",
+          "customtypes": ["footer"]
+        }
+      },
+      "favicon": {
+        "type": "Image",
+        "config": {
+          "label": "Favicon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "primary_color": {
+        "type": "Color",
+        "config": {
+          "label": "Primary Color",
+          "placeholder": ""
+        }
+      },
+      "secondary_color": {
+        "type": "Color",
+        "config": {
+          "label": "Secondary Color",
+          "placeholder": ""
+        }
+      },
+      "cta_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "CTA Text Color",
+          "placeholder": ""
+        }
+      },
+      "cta_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "CTA Background Color",
+          "placeholder": ""
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "og_image": {
+        "type": "Image",
+        "config": {
+          "label": "OG Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "gtm_id": {
+        "type": "Text",
+        "config": {
+          "label": "GTM_ID",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

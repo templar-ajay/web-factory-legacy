@@ -1,0 +1,55 @@
+{
+  "id": "small_background_image",
+  "type": "SharedSlice",
+  "name": "SmallBackgroundImage",
+  "description": "SmallBackgroundImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "small_background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Small Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "top": {
+          "type": "Number",
+          "config": {
+            "label": "Top",
+            "placeholder": ""
+          }
+        },
+        "right": {
+          "type": "Number",
+          "config": {
+            "label": "Right",
+            "placeholder": ""
+          }
+        },
+        "bottom": {
+          "type": "Number",
+          "config": {
+            "label": "Bottom",
+            "placeholder": ""
+          }
+        },
+        "left": {
+          "type": "Number",
+          "config": {
+            "label": "Left",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

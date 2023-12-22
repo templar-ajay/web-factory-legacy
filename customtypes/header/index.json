@@ -1,0 +1,85 @@
+{
+  "id": "header",
+  "label": "Header",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "width": 200
+          },
+          "thumbnails": []
+        }
+      },
+      "navigation_items_color": {
+        "type": "Color",
+        "config": {
+          "label": "Navigation Items Color",
+          "placeholder": ""
+        }
+      },
+      "header_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Header Background Color",
+          "placeholder": ""
+        }
+      },
+      "cta_icon": {
+        "type": "Image",
+        "config": {
+          "label": "CTA Icon",
+          "constraint": {
+            "width": 35,
+            "height": 35
+          },
+          "thumbnails": []
+        }
+      },
+      "cta_message": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Message",
+          "placeholder": ""
+        }
+      },
+      "cta_phone": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Phone",
+          "placeholder": ""
+        }
+      },
+      "cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "CTA Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "navigation": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

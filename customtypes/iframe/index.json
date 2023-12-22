@@ -1,0 +1,24 @@
+{
+  "id": "iframe",
+  "label": "iFrame",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "cta_iframe": {
+        "type": "Text",
+        "config": {
+          "label": "CTA iFrame",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

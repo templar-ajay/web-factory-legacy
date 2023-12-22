@@ -1,0 +1,89 @@
+{
+  "id": "project",
+  "type": "SharedSlice",
+  "name": "Project",
+  "description": "Project",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Text",
+            "placeholder": ""
+          }
+        },
+        "laptop_size_project_screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Laptop Size Project Screenshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "mobile_size_project_screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Mobile Size Project Screenshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "clients_review": {
+          "type": "Text",
+          "config": {
+            "label": "Client's Review",
+            "placeholder": ""
+          }
+        },
+        "clients_name": {
+          "type": "Text",
+          "config": {
+            "label": "Client's Name",
+            "placeholder": ""
+          }
+        },
+        "clients_professional_title": {
+          "type": "Text",
+          "config": {
+            "label": "Client's Professional Title",
+            "placeholder": ""
+          }
+        },
+        "clients_picture": {
+          "type": "Image",
+          "config": {
+            "label": "Clients Picture",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
