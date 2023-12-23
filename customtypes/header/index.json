@@ -43,13 +43,6 @@
           "placeholder": ""
         }
       },
-      "cta_phone": {
-        "type": "Text",
-        "config": {
-          "label": "CTA Phone",
-          "placeholder": ""
-        }
-      },
       "cta_link": {
         "type": "Link",
         "config": {

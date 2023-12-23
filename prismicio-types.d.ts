@@ -150,17 +150,6 @@ interface HeaderDocumentData {
   cta_message: prismic.KeyTextField;
 
   /**
-   * CTA Phone field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.cta_phone
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  cta_phone: prismic.KeyTextField;
-
-  /**
    * CTA Link field in *Header*
    *
    * - **Field Type**: Link
