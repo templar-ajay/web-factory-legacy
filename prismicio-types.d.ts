@@ -139,17 +139,6 @@ interface HeaderDocumentData {
   header_background_color: prismic.ColorField;
 
   /**
-   * CTA Icon field in *Header*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.cta_icon
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  cta_icon: prismic.ImageField<never>;
-
-  /**
    * CTA Message field in *Header*
    *
    * - **Field Type**: Text
@@ -464,7 +453,7 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
+  prismic.PrismicDocumentWithoutUID<
     Simplify<SettingsDocumentData>,
     "settings",
     Lang

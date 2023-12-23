@@ -36,17 +36,6 @@
           "placeholder": ""
         }
       },
-      "cta_icon": {
-        "type": "Image",
-        "config": {
-          "label": "CTA Icon",
-          "constraint": {
-            "width": 35,
-            "height": 35
-          },
-          "thumbnails": []
-        }
-      },
       "cta_message": {
         "type": "Text",
         "config": {
