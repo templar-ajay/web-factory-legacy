@@ -1,0 +1,66 @@
+{
+  "id": "call_to_action",
+  "type": "SharedSlice",
+  "name": "CallToAction",
+  "description": "CallToAction",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "call": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Call Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,strong,em,preformatted"
+          }
+        },
+        "action_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Action Button Text",
+            "placeholder": ""
+          }
+        },
+        "action_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Action Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "email_icon": {
+          "type": "Image",
+          "config": {
+            "label": "email_icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "email",
+            "placeholder": ""
+          }
+        },
+        "link_to_email": {
+          "type": "Link",
+          "config": {
+            "label": "link_to_email",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

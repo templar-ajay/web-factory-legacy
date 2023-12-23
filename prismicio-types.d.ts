@@ -212,7 +212,14 @@ interface IframeDocumentData {
 export type IframeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
 
-type PageDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice =
+  | CallToActionSlice
+  | CardsSlice
+  | SmallCardsSlice
+  | ProjectSlice
+  | PartnersSlice
+  | ParagraphSlice
+  | HeroSlice;
 
 /**
  * Content for Page documents
@@ -455,6 +462,101 @@ export type AllDocumentTypes =
   | IframeDocument
   | PageDocument
   | SettingsDocument;
+
+/**
+ * Primary content in *CallToAction → Primary*
+ */
+export interface CallToActionSliceDefaultPrimary {
+  /**
+   * Call Text field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.call
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  call: prismic.RichTextField;
+
+  /**
+   * Action Button Text field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.action_button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  action_button_text: prismic.KeyTextField;
+
+  /**
+   * Action Button Link field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.action_button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  action_button_link: prismic.LinkField;
+
+  /**
+   * email_icon field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.email_icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  email_icon: prismic.ImageField<never>;
+
+  /**
+   * email field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * link_to_email field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.link_to_email
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_email: prismic.LinkField;
+}
+
+/**
+ * Default variation for CallToAction Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CallToActionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CallToActionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CallToAction*
+ */
+type CallToActionSliceVariation = CallToActionSliceDefault;
+
+/**
+ * CallToAction Shared Slice
+ *
+ * - **API ID**: `call_to_action`
+ * - **Description**: CallToAction
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CallToActionSlice = prismic.SharedSlice<
+  "call_to_action",
+  CallToActionSliceVariation
+>;
 
 /**
  * Primary content in *Cards → Primary*
@@ -1076,6 +1178,10 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      CallToActionSlice,
+      CallToActionSliceDefaultPrimary,
+      CallToActionSliceVariation,
+      CallToActionSliceDefault,
       CardsSlice,
       CardsSliceDefaultPrimary,
       CardsSliceDefaultItem,
