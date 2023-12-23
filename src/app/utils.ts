@@ -1,15 +1,8 @@
 import { createClient } from "@/prismicio";
-import { client_tag } from "@/app/tag";
 
 export const getSettings = async () => {
   const client = createClient();
-  // const {settings} = await client.getSingle("settings");
-  const docs = await client.getByEveryTag([client_tag]);
-
-  //@ts-ignore
-  const settings: SettingsRDocumentData = docs.results.find(
-    (x) => x.type == "settings"
-  );
+  const settings = await client.getSingle("settings");
   return settings;
 };
 

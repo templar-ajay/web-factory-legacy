@@ -6,7 +6,6 @@ import { components } from "@/slices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/app/utils";
-import { client_tag } from "@/app/tag";
 
 type Params = { uid: string };
 
@@ -16,24 +15,21 @@ export default async function Page({ params }: { params: Params }) {
     .getByUID("page", params.uid)
     .catch(() => notFound());
 
-  // if the page is not of current client
-  if (!page?.tags.includes(client_tag)) {
-    notFound();
-  }
   const settings = await getSettings();
 
   const { default_header, default_footer } = settings.data;
-  //@ts-ignore
   const { header, footer } = page?.data;
 
   const headerUID =
     //@ts-ignore
     header?.uid ||
+    //@ts-ignore
     default_header?.uid ||
     "default-header-not-found-in-settings";
   const footerUID =
     //@ts-ignore
     footer?.uid ||
+    //@ts-ignore
     default_footer?.uid ||
     "default-footer-not-found-in-settings";
 
@@ -55,11 +51,6 @@ export async function generateMetadata({
   const page = await client
     .getByUID("page", params.uid)
     .catch(() => notFound());
-
-  // if the page is not of current client
-  if (!page?.tags.includes(client_tag)) {
-    notFound();
-  }
 
   const { meta_title, meta_description, meta_image } = page.data;
 

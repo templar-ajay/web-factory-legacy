@@ -4,7 +4,6 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import { client_tag } from "@/app/tag";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/app/utils";
@@ -12,32 +11,30 @@ import { getSettings } from "@/app/utils";
 export default async function Page() {
   const client = createClient();
 
-  const docs = await client
-    .getByEveryTag([client_tag, "homepage"])
-    .catch(() => notFound());
-  const page = docs.results.find((x) => x.type == "page");
-  // console.log("page", page);
+  const homepage = await client.getByUID("page", "homepage");
 
   const settings = await getSettings();
 
   const { default_header, default_footer } = settings.data;
-  //@ts-ignore
-  const { header, footer } = page?.data;
+  const { header, footer } = homepage?.data;
 
   const headerUID =
+    //@ts-ignore
     header?.uid ||
+    //@ts-ignore
     default_header?.uid ||
     "default-header-not-found-in-settings";
   const footerUID =
+    //@ts-ignore
     footer?.uid ||
+    //@ts-ignore
     default_footer?.uid ||
     "default-footer-not-found-in-settings";
 
   return (
     <>
       <Header uid={headerUID} />
-      {/*@ts-ignore*/}
-      <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone slices={homepage.data.slices} components={components} />
       <Footer uid={footerUID} />
     </>
   );
@@ -46,10 +43,9 @@ export default async function Page() {
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
 
-  const docs = await client
-    .getByEveryTag([client_tag, "homepage"])
+  const page = await client
+    .getByUID("page", "homepage")
     .catch(() => notFound());
-  const page = docs.results.find((x) => x.type == "page");
 
   return {
     //@ts-ignore

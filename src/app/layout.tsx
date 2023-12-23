@@ -34,12 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   console.log("settings", settings);
 
-  const {
-    meta_title,
-    meta_description,
-    og_image,
-    block_indexing_by_search_engines,
-  } = settings.data;
+  const { meta_title, meta_description, og_image } = settings.data;
 
   return {
     title: meta_title || "Fallback Meta Title",
@@ -47,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [og_image?.url || "./fallback_image_path"],
     },
-    robots: { index: block_indexing_by_search_engines == false },
+    robots: { index: true },
   };
 }
 
@@ -65,7 +60,7 @@ export default async function RootLayout({
 }) {
   const settings = await getSettings();
 
-  const { primary_color, secondary_color, gtm_id: GTM_ID } = settings.data;
+  const { gtm_id: GTM_ID } = settings.data;
 
   return (
     <html lang="en">
