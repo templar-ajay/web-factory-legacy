@@ -44,27 +44,9 @@
             "placeholder": "",
             "select": null
           }
-        },
-        "content": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Content",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,preformatted"
-          }
         }
       },
-      "items": {
-        "partner_logo": {
-          "type": "Image",
-          "config": {
-            "label": "Partner Logo",
-            "constraint": {},
-            "thumbnails": []
-          }
-        }
-      }
+      "items": {}
     }
   ]
 }

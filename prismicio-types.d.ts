@@ -479,6 +479,93 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *Cards → Primary*
+ */
+export interface CardsSliceDefaultPrimary {
+  /**
+   * Title field in *Cards → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Cards → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Cards → Items*
+ */
+export interface CardsSliceDefaultItem {
+  /**
+   * Card Icon field in *Cards → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.items[].card_icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  card_icon: prismic.ImageField<never>;
+
+  /**
+   * Card Title field in *Cards → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.items[].card_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  card_title: prismic.RichTextField;
+
+  /**
+   * Card Content field in *Cards → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.items[].card_content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  card_content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Cards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CardsSliceDefaultPrimary>,
+  Simplify<CardsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Cards*
+ */
+type CardsSliceVariation = CardsSliceDefault;
+
+/**
+ * Cards Shared Slice
+ *
+ * - **API ID**: `cards`
+ * - **Description**: Cards
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardsSlice = prismic.SharedSlice<"cards", CardsSliceVariation>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -521,31 +608,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
-
-  /**
-   * Content field in *Hero → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-}
-
-/**
- * Primary content in *Hero → Items*
- */
-export interface HeroSliceDefaultItem {
-  /**
-   * Partner Logo field in *Hero → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.items[].partner_logo
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  partner_logo: prismic.ImageField<never>;
 }
 
 /**
@@ -558,7 +620,7 @@ export interface HeroSliceDefaultItem {
 export type HeroSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<HeroSliceDefaultPrimary>,
-  Simplify<HeroSliceDefaultItem>
+  never
 >;
 
 /**
@@ -628,6 +690,96 @@ type NavigationSliceVariation = NavigationSliceDefault;
 export type NavigationSlice = prismic.SharedSlice<
   "navigation",
   NavigationSliceVariation
+>;
+
+/**
+ * Primary content in *Paragraph → Primary*
+ */
+export interface ParagraphSliceDefaultPrimary {
+  /**
+   * Content field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Paragraph Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraphSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ParagraphSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Paragraph*
+ */
+type ParagraphSliceVariation = ParagraphSliceDefault;
+
+/**
+ * Paragraph Shared Slice
+ *
+ * - **API ID**: `paragraph`
+ * - **Description**: Paragraph
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ParagraphSlice = prismic.SharedSlice<
+  "paragraph",
+  ParagraphSliceVariation
+>;
+
+/**
+ * Primary content in *Partners → Items*
+ */
+export interface PartnersSliceDefaultItem {
+  /**
+   * Partner Logo field in *Partners → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partners.items[].partner_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  partner_logo: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Partners Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<PartnersSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Partners*
+ */
+type PartnersSliceVariation = PartnersSliceDefault;
+
+/**
+ * Partners Shared Slice
+ *
+ * - **API ID**: `partners`
+ * - **Description**: Partners
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSlice = prismic.SharedSlice<
+  "partners",
+  PartnersSliceVariation
 >;
 
 /**
@@ -840,6 +992,86 @@ export type SmallBackgroundImageSlice = prismic.SharedSlice<
   SmallBackgroundImageSliceVariation
 >;
 
+/**
+ * Primary content in *SmallCards → Primary*
+ */
+export interface SmallCardsSliceDefaultPrimary {
+  /**
+   * Title field in *SmallCards → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *SmallCards → Items*
+ */
+export interface SmallCardsSliceDefaultItem {
+  /**
+   * Card Icon field in *SmallCards → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.items[].card_icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  card_icon: prismic.ImageField<never>;
+
+  /**
+   * Card Title field in *SmallCards → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.items[].card_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  card_title: prismic.RichTextField;
+
+  /**
+   * Card Content field in *SmallCards → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.items[].card_content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  card_content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for SmallCards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallCardsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallCardsSliceDefaultPrimary>,
+  Simplify<SmallCardsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *SmallCards*
+ */
+type SmallCardsSliceVariation = SmallCardsSliceDefault;
+
+/**
+ * SmallCards Shared Slice
+ *
+ * - **API ID**: `small_cards`
+ * - **Description**: SmallCards
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallCardsSlice = prismic.SharedSlice<
+  "small_cards",
+  SmallCardsSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -866,15 +1098,27 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      CardsSlice,
+      CardsSliceDefaultPrimary,
+      CardsSliceDefaultItem,
+      CardsSliceVariation,
+      CardsSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
-      HeroSliceDefaultItem,
       HeroSliceVariation,
       HeroSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultItem,
       NavigationSliceVariation,
       NavigationSliceDefault,
+      ParagraphSlice,
+      ParagraphSliceDefaultPrimary,
+      ParagraphSliceVariation,
+      ParagraphSliceDefault,
+      PartnersSlice,
+      PartnersSliceDefaultItem,
+      PartnersSliceVariation,
+      PartnersSliceDefault,
       ProjectSlice,
       ProjectSliceDefaultPrimary,
       ProjectSliceVariation,
@@ -883,6 +1127,11 @@ declare module "@prismicio/client" {
       SmallBackgroundImageSliceDefaultPrimary,
       SmallBackgroundImageSliceVariation,
       SmallBackgroundImageSliceDefault,
+      SmallCardsSlice,
+      SmallCardsSliceDefaultPrimary,
+      SmallCardsSliceDefaultItem,
+      SmallCardsSliceVariation,
+      SmallCardsSliceDefault,
     };
   }
 }

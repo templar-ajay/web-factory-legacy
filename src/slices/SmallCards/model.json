@@ -1,0 +1,55 @@
+{
+  "id": "small_cards",
+  "type": "SharedSlice",
+  "name": "SmallCards",
+  "description": "SmallCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong,em"
+          }
+        }
+      },
+      "items": {
+        "card_icon": {
+          "type": "Image",
+          "config": {
+            "label": "Card Icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "card_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,em,heading3"
+          }
+        },
+        "card_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
+        }
+      }
+    }
+  ]
+}
