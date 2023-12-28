@@ -3,7 +3,7 @@ import type { Metadata, ResolvingMetadata, Viewport } from "next";
 import "./globals.css";
 import clsx from "clsx";
 
-import { Nunito, Nunito_Sans } from "next/font/google";
+import { Questrial, Roboto, Montserrat } from "next/font/google";
 
 import { repositoryName } from "@/prismicio";
 import { PrismicPreview } from "@prismicio/next";
@@ -12,16 +12,24 @@ import { Providers } from "@/app/providers";
 import { TrackingHeadScript } from "@phntms/next-gtm";
 import { getSettings } from "@/app/utils";
 
-const body = Nunito_Sans({
+const body = Questrial({
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
   variable: "--font-body",
 });
 
-const display = Nunito({
+const display = Roboto({
   subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
   display: "swap",
   variable: "--font-display",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-montserrat",
 });
 
 type Props = {
@@ -64,7 +72,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={clsx(body.variable, display.variable)}>
+      <body
+        className={clsx(body.variable, display.variable, montserrat.variable)}
+      >
         <Providers>
           <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
           {children}

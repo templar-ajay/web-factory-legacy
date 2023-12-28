@@ -33,9 +33,16 @@ export default async function Page() {
 
   return (
     <>
-      <Header uid={headerUID} />
-      <SliceZone slices={homepage.data.slices} components={components} />
-      <Footer uid={footerUID} />
+      <div
+        style={{
+          color: homepage.data.text_color || "",
+          background: homepage.data.background_color || "",
+        }}
+      >
+        <Header uid={headerUID} />
+        <SliceZone slices={homepage.data.slices} components={components} />
+        <Footer uid={footerUID} />
+      </div>
     </>
   );
 }

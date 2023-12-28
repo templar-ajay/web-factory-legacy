@@ -15,8 +15,8 @@ const SmallCards = ({ slice }: SmallCardsProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for small_cards (variation: {slice.variation})
-      Slices
+      {/* Placeholder component for small_cards (variation: {slice.variation})
+      Slices */}
     </section>
   );
 };

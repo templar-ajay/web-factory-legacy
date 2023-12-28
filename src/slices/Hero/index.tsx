@@ -1,5 +1,68 @@
+import Bounded from "@/components/Bounded";
+import Heading from "@/components/Heading";
+import Paragraph from "@/components/Paragraph";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
+import {
+  JSXMapSerializer,
+  PrismicRichText,
+  SliceComponentProps,
+} from "@prismicio/react";
+
+type componentsType = ({}: any) => JSXMapSerializer;
+
+const getComponents: componentsType = ({
+  bond_color = "inherit",
+  header_color = "inherit",
+  sub_header_color = "inherit",
+}: any) => {
+  return {
+    heading2: ({ children }: any) => {
+      return (
+        <Heading
+          as="h2"
+          size="lg"
+          className="font-light tracking-tight !leading-tight !text-[6vw] 2xl:!text-[4.4vw] text-center mb-4"
+          color={header_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading1: ({ children }: any) => {
+      return (
+        <Heading
+          as="h1"
+          size="xxs"
+          className="!font-thin tracking-widest font-display text-center mb-5"
+          color={bond_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    heading3: ({ children }: any) => {
+      return (
+        <Heading
+          as="h3"
+          size="sm"
+          className="font-body text-center mb-4"
+          color={sub_header_color}
+        >
+          {children}
+        </Heading>
+      );
+    },
+    paragraph: ({ children }: any) => (
+      <Paragraph
+        className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10"
+        color={sub_header_color}
+      >
+        {children}
+      </Paragraph>
+    ),
+  };
+};
 
 /**
  * Props for `Hero`.
@@ -10,13 +73,33 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
+  const components = getComponents({});
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for hero (variation: {slice.variation}) Slices
-    </section>
+      <div className="max-w-[700px] mx-auto">
+        <PrismicRichText
+          field={slice.primary.bond_text}
+          components={components}
+        />
+      </div>
+      <div>
+        <PrismicRichText
+          field={slice.primary.heading_h2}
+          components={components}
+        />
+      </div>
+      <div className="block text-center pt-12">
+        <PrismicNextLink
+          className="inline-block transition-all duration-75 hover:-translate-y-2 text-3xl !leading-snug rounded-full border-[1px] border-solid px-[100px] py-[25px]"
+          field={slice.primary.cta_link}
+        >
+          {slice.primary.cta_text}
+        </PrismicNextLink>
+      </div>
+    </Bounded>
   );
 };
 

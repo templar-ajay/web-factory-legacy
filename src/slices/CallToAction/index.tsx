@@ -15,8 +15,8 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for call_to_action (variation: {slice.variation})
-      Slices
+      {/* Placeholder component for call_to_action (variation: {slice.variation})
+      Slices */}
     </section>
   );
 };

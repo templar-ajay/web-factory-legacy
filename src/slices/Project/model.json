@@ -18,7 +18,7 @@
             "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "heading2,strong,em"
           }
         },
         "description": {
@@ -54,10 +54,12 @@
           }
         },
         "clients_review": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
-            "label": "Client's Review",
-            "placeholder": ""
+            "label": "Clients Review",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
           }
         },
         "clients_name": {
@@ -78,7 +80,10 @@
           "type": "Image",
           "config": {
             "label": "Clients Picture",
-            "constraint": {},
+            "constraint": {
+              "width": 362,
+              "height": 362
+            },
             "thumbnails": []
           }
         }

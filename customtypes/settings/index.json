@@ -11,9 +11,7 @@
         "config": {
           "label": "Default Header",
           "select": "document",
-          "customtypes": [
-            "header"
-          ]
+          "customtypes": ["header"]
         }
       },
       "default_footer": {
@@ -21,9 +19,7 @@
         "config": {
           "label": "Default Footer",
           "select": "document",
-          "customtypes": [
-            "footer"
-          ]
+          "customtypes": ["footer"]
         }
       },
       "favicon": {

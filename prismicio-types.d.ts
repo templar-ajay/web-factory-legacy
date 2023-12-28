@@ -259,6 +259,28 @@ interface PageDocumentData {
   footer: prismic.ContentRelationshipField<"footer">;
 
   /**
+   * Text Color field in *Page*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  text_color: prismic.ColorField;
+
+  /**
+   * Background Color field in *Page*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.background_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  background_color: prismic.ColorField;
+
+  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -917,14 +939,14 @@ export interface ProjectSliceDefaultPrimary {
   mobile_size_project_screenshot: prismic.ImageField<never>;
 
   /**
-   * Client's Review field in *Project → Primary*
+   * Clients Review field in *Project → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: project.primary.clients_review
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  clients_review: prismic.KeyTextField;
+  clients_review: prismic.RichTextField;
 
   /**
    * Client's Name field in *Project → Primary*

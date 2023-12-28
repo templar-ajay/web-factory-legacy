@@ -1,4 +1,4 @@
-import CTA from "@/components/CTA";
+import CTA from "@/components/ProjectCTA";
 import Iframe from "@/components/Iframe";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";

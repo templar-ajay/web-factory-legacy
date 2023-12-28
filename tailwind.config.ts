@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { nextui } from "@nextui-org/react";
+import { Montserrat } from "next/font/google";
 
 const config: Config = {
   content: [
@@ -14,10 +15,12 @@ const config: Config = {
       fontFamily: {
         body: ["var(--font-body)"],
         display: ["var(--font-display)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       screens: {
         xs: "375px",
         mobile: "450px",
+        _992: "992px",
       },
     },
   },
