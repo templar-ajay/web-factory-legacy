@@ -51,6 +51,15 @@
           "placeholder": ""
         }
       },
+      "background_noise": {
+        "type": "Boolean",
+        "config": {
+          "label": "Background Noise",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

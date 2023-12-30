@@ -16,7 +16,7 @@ export default async function Page() {
   const settings = await getSettings();
 
   const { default_header, default_footer } = settings.data;
-  const { header, footer } = homepage?.data;
+  const { header, footer, background_noise } = homepage?.data;
 
   const headerUID =
     //@ts-ignore
@@ -39,9 +39,18 @@ export default async function Page() {
           background: homepage.data.background_color || "",
         }}
       >
-        <Header uid={headerUID} />
-        <SliceZone slices={homepage.data.slices} components={components} />
-        <Footer uid={footerUID} />
+        <div
+          style={{
+            background: homepage.data.background_noise
+              ? "url(/Noise&Texture.webp)"
+              : "",
+            zIndex: 1,
+          }}
+        >
+          <Header uid={headerUID} />
+          <SliceZone slices={homepage.data.slices} components={components} />
+          <Footer uid={footerUID} />
+        </div>
       </div>
     </>
   );

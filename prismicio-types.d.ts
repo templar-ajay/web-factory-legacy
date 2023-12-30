@@ -161,6 +161,17 @@ interface HeaderDocumentData {
   cta_link: prismic.LinkField;
 
   /**
+   * Hamburger Icon Color field in *Header*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.hamburger_icon_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  hamburger_icon_color: prismic.ColorField;
+
+  /**
    * Slice Zone field in *Header*
    *
    * - **Field Type**: Slice Zone
@@ -279,6 +290,18 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   background_color: prismic.ColorField;
+
+  /**
+   * Background Noise field in *Page*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: page.background_noise
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  background_noise: prismic.BooleanField;
 
   /**
    * Slice Zone field in *Page*

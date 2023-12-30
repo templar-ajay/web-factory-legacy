@@ -51,6 +51,13 @@
           "select": null
         }
       },
+      "hamburger_icon_color": {
+        "type": "Color",
+        "config": {
+          "label": "Hamburger Icon Color",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

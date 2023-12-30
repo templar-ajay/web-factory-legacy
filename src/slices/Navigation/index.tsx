@@ -13,22 +13,39 @@ export type NavigationProps = SliceComponentProps<Content.NavigationSlice>;
 const Navigation = ({
   slice,
   //@ts-ignore
-  context: { spacing },
+  context: { orientation },
 }: NavigationProps): JSX.Element => {
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {slice.items.map(({ name, link }) => (
-        <PrismicNextLink
-          className="navigation-item text-xl"
-          style={{ paddingRight: spacing || "" }}
-          field={link}
-        >
-          {name}
-        </PrismicNextLink>
-      ))}
+      {orientation == "desktop" && (
+        <div className="flex">
+          {slice.items.map(({ name, link }) => (
+            <PrismicNextLink
+              className="navigation-item text-xl block"
+              style={{ paddingRight: "50px" }}
+              field={link}
+              key={name}
+            >
+              {name}
+            </PrismicNextLink>
+          ))}
+        </div>
+      )}
+      {orientation == "mobile" && (
+        <div>
+          {slice.items.map(({ name, link }) => (
+            <PrismicNextLink
+              className="navigation-item text-2xl block text-center py-8"
+              field={link}
+            >
+              {name}
+            </PrismicNextLink>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

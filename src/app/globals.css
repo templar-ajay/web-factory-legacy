@@ -3,47 +3,74 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    border: 0;
-    box-sizing: inherit;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .arrow-box:hover .arrow-button {
-    transform: translateY(-10px);
-    transform-style: preserve-3d;
+  transform: translateY(-10px);
+  transform-style: preserve-3d;
 }
 
 .arrow-box .arrow-button {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .navigation-item {
-    transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .navigation-item:hover {
-    color: rgb(234, 179, 8);
+  color: rgb(234, 179, 8);
 }
 
 .arrow-button,
 .arrow-icon {
-    transition: all .3s;
-    animation-timing-function: ease-in;
+  transition: all 0.3s;
+  animation-timing-function: ease-in;
 }
 
 .arrow-box:hover .arrow-button .arrow-icon {
-    transform: translateX(6px);
+  transform: translateX(6px);
+}
+
+.arrow-icon.big {
+  scale: 1.5;
+}
+
+.slide-left {
+  animation: 0.4s slide-left ease;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.slide-right {
+  animation: 0.4s slide-right ease;
+}
+@keyframes slide-right {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
 }

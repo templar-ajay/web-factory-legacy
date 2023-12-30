@@ -22,7 +22,7 @@ const getComponents: componentsType = ({
         <Heading
           as="h2"
           size="lg"
-          className="font-light tracking-tight !leading-tight !text-[6vw] 2xl:!text-[4.4vw] text-center mb-4"
+          className="font-light tracking-tight leading-tight text-xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
           color={header_color}
         >
           {children}
@@ -79,7 +79,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="max-w-[700px] mx-auto">
+      <div className="max-w-[700px] mt-[80px] md:mt-0 mx-auto">
         <PrismicRichText
           field={slice.primary.bond_text}
           components={components}
@@ -91,9 +91,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           components={components}
         />
       </div>
-      <div className="block text-center pt-12">
+      <div className="block text-center pt-8 md:pt-12">
         <PrismicNextLink
-          className="inline-block transition-all duration-75 hover:-translate-y-2 text-3xl !leading-snug rounded-full border-[1px] border-solid px-[100px] py-[25px]"
+          className="inline-block transition-all duration-75 hover:-translate-y-2 !leading-snug rounded-full border-[1px] border-solid px-[50px] mobile:px-[65px] md:px-[100px] py-[12.5px] mobile:py-[15px] md:py-[25px] text-xl mobile:text-2xl md:text-3xl"
           field={slice.primary.cta_link}
         >
           {slice.primary.cta_text}

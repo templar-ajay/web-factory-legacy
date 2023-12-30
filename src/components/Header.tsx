@@ -1,15 +1,24 @@
+"use client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { getHeader, getSettings } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "@/slices/Navigation";
+import { Burger } from "./SVG";
+import { useState } from "react";
+import MobileNavigation from "./MobileNavigation";
 
 type HeaderParams = {
   uid: string;
 };
 
 export default async function Header({ uid }: HeaderParams) {
+  const [navOpen, setNavOpen] = useState(false);
+  function handleBurgerClick() {
+    setNavOpen(!navOpen);
+  }
+
   const header = await getHeader(uid);
   const settings = await getSettings();
 
@@ -21,6 +30,7 @@ export default async function Header({ uid }: HeaderParams) {
     cta_link,
     header_background_color,
     navigation_items_color,
+    hamburger_icon_color,
     slices,
   } = header.data;
 
@@ -33,7 +43,7 @@ export default async function Header({ uid }: HeaderParams) {
         }}
       >
         <div className="flex justify-between items-center px-3 sm:px-5 py-5 sm:py-7 mx-auto max-w-[1300px]">
-          <div className="logo h-fit">
+          <div className="logo h-fit !z-50 relative">
             <Link href="/">
               <PrismicNextImage
                 field={logo}
@@ -44,8 +54,9 @@ export default async function Header({ uid }: HeaderParams) {
               />
             </Link>
           </div>
+          {/* desktop */}
           <div
-            className="h-fit"
+            className="h-fit hidden md:block"
             style={{
               color: navigation_items_color || secondary_color || "#fff",
             }}
@@ -53,7 +64,7 @@ export default async function Header({ uid }: HeaderParams) {
             <div className="flex items-start">
               {slices[0] && (
                 <Navigation
-                  context={{ spacing: 50 }}
+                  context={{ orientation: "desktop" }}
                   index={0}
                   slices={slices}
                   slice={slices[0]}
@@ -77,6 +88,17 @@ export default async function Header({ uid }: HeaderParams) {
                 </div>
               </PrismicNextLink>
             </div>
+          </div>
+          {/* mobile */}
+          <div className="block md:hidden cursor-pointer pointer-events-auto">
+            <MobileNavigation
+              slices={slices}
+              cta_message={cta_message}
+              cta_link={cta_link}
+              header_background_color={header_background_color}
+              navigation_items_color={navigation_items_color}
+              hamburger_icon_color={hamburger_icon_color}
+            />
           </div>
         </div>
       </header>
