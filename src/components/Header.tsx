@@ -81,7 +81,7 @@ export default async function Header({ uid }: HeaderParams) {
                   >
                     {cta_message}
                     <FontAwesomeIcon
-                      className="arrow-icon mb-1 ml-2 w-3 inline-block"
+                      className="arrow-icon mb-0 mt-0 ml-2 w-3 inline-block"
                       icon={faArrowRight}
                     />
                   </div>
