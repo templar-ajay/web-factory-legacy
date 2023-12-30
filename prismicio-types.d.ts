@@ -523,6 +523,26 @@ export interface CallToActionSliceDefaultPrimary {
   call: prismic.RichTextField;
 
   /**
+   * Call Text Color field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.call_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  call_text_color: prismic.ColorField;
+
+  /**
+   * Bold Call Text Color field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.bold_call_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bold_call_text_color: prismic.ColorField;
+
+  /**
    * Action Button Text field in *CallToAction → Primary*
    *
    * - **Field Type**: Text
@@ -533,6 +553,16 @@ export interface CallToActionSliceDefaultPrimary {
   action_button_text: prismic.KeyTextField;
 
   /**
+   * Action Text Color field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.action_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  action_text_color: prismic.ColorField;
+
+  /**
    * Action Button Link field in *CallToAction → Primary*
    *
    * - **Field Type**: Link
@@ -541,6 +571,16 @@ export interface CallToActionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   action_button_link: prismic.LinkField;
+
+  /**
+   * Action Button Background field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.action_button_background
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  action_button_background: prismic.ColorField;
 
   /**
    * email_icon field in *CallToAction → Primary*
@@ -571,6 +611,16 @@ export interface CallToActionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_to_email: prismic.LinkField;
+
+  /**
+   * text color field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  text_color: prismic.ColorField;
 }
 
 /**

@@ -9,7 +9,7 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Asleep"
+							"text": "Swept"
 						}
 					}
 				]
@@ -60,6 +60,31 @@
 					"__TYPE__": "ExternalLink",
 					"url": "https://prismic.io"
 				}
+			},
+			"call_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#1baa8d",
+				"type": "Color"
+			},
+			"bold_call_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#0dc1cc",
+				"type": "Color"
+			},
+			"action_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#90da57",
+				"type": "Color"
+			},
+			"action_button_background": {
+				"__TYPE__": "FieldContent",
+				"value": "#eafd89",
+				"type": "Color"
+			},
+			"text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#7b3b9a",
+				"type": "Color"
 			}
 		},
 		"items": []

@@ -18,7 +18,21 @@
             "label": "Call Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,strong,em,preformatted"
+            "multi": "preformatted,heading2,strong,em"
+          }
+        },
+        "call_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Call Text Color",
+            "placeholder": ""
+          }
+        },
+        "bold_call_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Bold Call Text Color",
+            "placeholder": ""
           }
         },
         "action_button_text": {
@@ -28,12 +42,26 @@
             "placeholder": ""
           }
         },
+        "action_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Action Text Color",
+            "placeholder": ""
+          }
+        },
         "action_button_link": {
           "type": "Link",
           "config": {
             "label": "Action Button Link",
             "placeholder": "",
             "select": null
+          }
+        },
+        "action_button_background": {
+          "type": "Color",
+          "config": {
+            "label": "Action Button Background",
+            "placeholder": ""
           }
         },
         "email_icon": {
@@ -57,6 +85,13 @@
             "label": "link_to_email",
             "placeholder": "",
             "select": null
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
           }
         }
       },
