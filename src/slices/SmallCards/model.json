@@ -20,6 +20,27 @@
             "allowTargetBlank": true,
             "single": "heading2,strong,em"
           }
+        },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Title Color",
+            "placeholder": ""
+          }
+        },
+        "card_title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Card Title Color",
+            "placeholder": ""
+          }
+        },
+        "card_content_color": {
+          "type": "Color",
+          "config": {
+            "label": "Card Content Color",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -27,7 +48,10 @@
           "type": "Image",
           "config": {
             "label": "Card Icon",
-            "constraint": {},
+            "constraint": {
+              "width": 32,
+              "height": 32
+            },
             "thumbnails": []
           }
         },
@@ -37,7 +61,7 @@
             "label": "Card Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "strong,em,heading3"
+            "single": "heading3,strong,em"
           }
         },
         "card_content": {

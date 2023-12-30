@@ -1130,6 +1130,36 @@ export interface SmallCardsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   title: prismic.RichTextField;
+
+  /**
+   * Title Color field in *SmallCards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
+   * Card Title Color field in *SmallCards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.primary.card_title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  card_title_color: prismic.ColorField;
+
+  /**
+   * Card Content Color field in *SmallCards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_cards.primary.card_content_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  card_content_color: prismic.ColorField;
 }
 
 /**
