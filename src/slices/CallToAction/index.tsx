@@ -53,7 +53,11 @@ export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 /**
  * Component for "CallToAction" Slices.
  */
-const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
+const CallToAction = ({
+  slice,
+  //@ts-ignore
+  context: { page_default_text_color },
+}: CallToActionProps): JSX.Element => {
   const {
     text_color,
     call_text_color,
@@ -62,9 +66,9 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
     bold_call_text_color,
   } = slice.primary;
   const components = getComponents({
-    h2_color: call_text_color,
+    h2_color: call_text_color || page_default_text_color,
     strong_color: bold_call_text_color,
-    paragraph_color: text_color,
+    paragraph_color: text_color || page_default_text_color,
   });
   return (
     <Bounded
@@ -95,7 +99,11 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
       </div>
 
       <div className="email mx-auto text-center text-xl ">
-        <PrismicNextLink className="py-5" field={slice.primary.link_to_email}>
+        <PrismicNextLink
+          style={{ color: page_default_text_color }}
+          className="py-5"
+          field={slice.primary.link_to_email}
+        >
           <PrismicNextImage
             className="inline-block mr-3 "
             field={slice.primary.email_icon}

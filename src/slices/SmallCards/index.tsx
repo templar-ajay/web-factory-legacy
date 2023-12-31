@@ -60,12 +60,16 @@ export type SmallCardsProps = SliceComponentProps<Content.SmallCardsSlice>;
 /**
  * Component for "SmallCards" Slices.
  */
-const SmallCards = ({ slice }: SmallCardsProps): JSX.Element => {
+const SmallCards = ({
+  slice,
+  //@ts-ignore
+  context: { page_default_text_color },
+}: SmallCardsProps): JSX.Element => {
   const { title_color, card_title_color, card_content_color } = slice.primary;
   const components = getComponents({
-    h2_color: title_color,
-    h3_color: card_title_color,
-    paragraph_color: card_content_color,
+    h2_color: title_color || page_default_text_color,
+    h3_color: card_title_color || page_default_text_color,
+    paragraph_color: card_content_color || page_default_text_color,
   });
   return (
     <Bounded

@@ -13,11 +13,17 @@ import Image from "next/image";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
+type getComponentsProps = {
+  h3_color: any;
+  h2_color: any;
+  paragraph_color: any;
+};
+
 const getComponents: componentsType = ({
-  bond_color = "inherit",
-  header_color = "inherit",
-  sub_header_color = "inherit",
-}: any) => {
+  h3_color = "inherit",
+  h2_color = "inherit",
+  paragraph_color = "inherit",
+}: getComponentsProps) => {
   return {
     heading2: ({ children }: any) => {
       return (
@@ -25,7 +31,7 @@ const getComponents: componentsType = ({
           as="h2"
           size="xl"
           className="font-extrabold tracking-tight !leading-snug text-center lg:text-left mb-4"
-          color={header_color}
+          color={h2_color}
         >
           {children}
         </Heading>
@@ -38,7 +44,7 @@ const getComponents: componentsType = ({
           as="h3"
           size="sm"
           className="font-body text-center mb-4"
-          color={sub_header_color}
+          color={h3_color}
         >
           {children}
         </Heading>
@@ -47,7 +53,7 @@ const getComponents: componentsType = ({
     paragraph: ({ children }: any) => (
       <Paragraph
         className="text-center lg:text-left tracking-wider !leading-9 text-lg md:text-xl text-black-500 font-light mt-2 mb-10"
-        color={sub_header_color}
+        color={paragraph_color}
       >
         {children}
       </Paragraph>
@@ -63,8 +69,16 @@ export type ProjectProps = SliceComponentProps<Content.ProjectSlice>;
 /**
  * Component for "Project" Slices.
  */
-const Project = ({ slice }: ProjectProps): JSX.Element => {
-  const components = getComponents({});
+const Project = ({
+  slice,
+  //@ts-ignore
+  context: { page_default_text_color },
+}: ProjectProps): JSX.Element => {
+  const components = getComponents({
+    h2_color: page_default_text_color,
+    h3_color: page_default_text_color,
+    paragraph_color: page_default_text_color,
+  });
   return (
     <>
       <Bounded
@@ -82,7 +96,7 @@ const Project = ({ slice }: ProjectProps): JSX.Element => {
               components={components}
             />
             <div className="block w-fit mx-auto lg:mx-0">
-              <ProjectCTA style={{ color: "#fff" }}>
+              <ProjectCTA style={{ color: page_default_text_color || "#fff" }}>
                 {slice.primary.cta_text}
               </ProjectCTA>
             </div>
@@ -130,14 +144,17 @@ const Project = ({ slice }: ProjectProps): JSX.Element => {
                   paragraph: ({ children }) => (
                     <Paragraph
                       className="font-extralight text-md mobile:text-lg md:text-xl leading-9 text-center mx-auto md:ml-0 max-w-xl md:max-w-2xl md:text-left"
-                      color="inherit"
+                      color={page_default_text_color || "inherit"}
                     >
                       {children}
                     </Paragraph>
                   ),
                 }}
               />
-              <div className="mt-6 mobile:mt-8 md:mt-12">
+              <div
+                className="mt-6 mobile:mt-8 md:mt-12"
+                style={{ color: page_default_text_color || "inherit" }}
+              >
                 <p className="text-xl md:text-2xl text-center md:text-left font-bold">
                   {slice.primary.clients_name}
                 </p>

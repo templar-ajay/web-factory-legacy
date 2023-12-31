@@ -11,11 +11,7 @@ import {
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
-const getComponents: componentsType = ({
-  bond_color = "inherit",
-  header_color = "inherit",
-  sub_header_color = "inherit",
-}: any) => {
+const getComponents: componentsType = ({ text_color = "inherit" }: any) => {
   return {
     heading2: ({ children }: any) => {
       return (
@@ -23,7 +19,7 @@ const getComponents: componentsType = ({
           as="h2"
           size="lg"
           className="font-light tracking-tight leading-tight text-xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
-          color={header_color}
+          color={text_color}
         >
           {children}
         </Heading>
@@ -35,7 +31,7 @@ const getComponents: componentsType = ({
           as="h1"
           size="xxs"
           className="!font-thin tracking-widest font-display text-center mb-5"
-          color={bond_color}
+          color={text_color}
         >
           {children}
         </Heading>
@@ -47,7 +43,7 @@ const getComponents: componentsType = ({
           as="h3"
           size="sm"
           className="font-body text-center mb-4"
-          color={sub_header_color}
+          color={text_color}
         >
           {children}
         </Heading>
@@ -56,7 +52,7 @@ const getComponents: componentsType = ({
     paragraph: ({ children }: any) => (
       <Paragraph
         className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10"
-        color={sub_header_color}
+        color={text_color}
       >
         {children}
       </Paragraph>
@@ -72,8 +68,15 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 /**
  * Component for "Hero" Slices.
  */
-const Hero = ({ slice }: HeroProps): JSX.Element => {
-  const components = getComponents({});
+
+const Hero = ({
+  slice,
+  // @ts-ignore
+  context: { page_default_text_color },
+}: HeroProps): JSX.Element => {
+  const components = getComponents({
+    text_color: page_default_text_color,
+  });
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -95,6 +98,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <PrismicNextLink
           className="inline-block transition-all duration-75 hover:-translate-y-2 !leading-snug rounded-full border-[1px] border-solid px-[50px] mobile:px-[65px] md:px-[100px] py-[12.5px] mobile:py-[15px] md:py-[25px] text-xl mobile:text-2xl md:text-3xl"
           field={slice.primary.cta_link}
+          style={{ color: page_default_text_color }}
         >
           {slice.primary.cta_text}
         </PrismicNextLink>

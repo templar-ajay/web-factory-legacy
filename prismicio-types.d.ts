@@ -270,15 +270,15 @@ interface PageDocumentData {
   footer: prismic.ContentRelationshipField<"footer">;
 
   /**
-   * Text Color field in *Page*
+   * Page Default Text Color field in *Page*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: page.text_color
+   * - **API ID Path**: page.page_default_text_color
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#color
    */
-  text_color: prismic.ColorField;
+  page_default_text_color: prismic.ColorField;
 
   /**
    * Background Color field in *Page*

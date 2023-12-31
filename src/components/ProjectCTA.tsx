@@ -7,7 +7,7 @@ const ProjectCTA = ({ children, ...props }: any) => {
       <button className="arrow-button block text-lg xs:text-lg sm:text-lg border-solid border-[1px] rounded-full px-8 py-2">
         {children}
         <FontAwesomeIcon
-          className="arrow-icon mb-1 ml-2 w-3 inline-block"
+          className="arrow-icon ml-2 w-3 inline-block"
           icon={faArrowRight}
         />
       </button>

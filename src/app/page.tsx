@@ -38,7 +38,7 @@ export default async function Page() {
         <div
           className="absolute w-full h-full -z-50"
           style={{
-            color: homepage.data.text_color || "",
+            color: homepage.data.page_default_text_color || "",
             background: homepage.data.background_color || "",
           }}
         />
@@ -59,7 +59,13 @@ export default async function Page() {
         )}
 
         <Header uid={headerUID} />
-        <SliceZone slices={homepage.data.slices} components={components} />
+        <SliceZone
+          slices={homepage.data.slices}
+          components={components}
+          context={{
+            page_default_text_color: homepage.data.page_default_text_color,
+          }}
+        />
         <Footer uid={footerUID} />
       </div>
     </>

@@ -37,10 +37,10 @@
           "customtypes": ["footer"]
         }
       },
-      "text_color": {
+      "page_default_text_color": {
         "type": "Color",
         "config": {
-          "label": "Text Color",
+          "label": "Page Default Text Color",
           "placeholder": ""
         }
       },
