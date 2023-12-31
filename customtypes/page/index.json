@@ -60,6 +60,15 @@
           "placeholder_false": "false"
         }
       },
+      "morphing_effect": {
+        "type": "Boolean",
+        "config": {
+          "label": "Morphing Effect",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

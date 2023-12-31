@@ -7,6 +7,7 @@ import { components } from "@/slices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/app/utils";
+import Morphing from "@/components/Morphing/Morphing";
 
 export default async function Page() {
   const client = createClient();
@@ -16,7 +17,7 @@ export default async function Page() {
   const settings = await getSettings();
 
   const { default_header, default_footer } = settings.data;
-  const { header, footer, background_noise } = homepage?.data;
+  const { header, footer, background_noise, morphing_effect } = homepage?.data;
 
   const headerUID =
     //@ts-ignore
@@ -33,24 +34,33 @@ export default async function Page() {
 
   return (
     <>
-      <div
-        style={{
-          color: homepage.data.text_color || "",
-          background: homepage.data.background_color || "",
-        }}
-      >
+      <div className="relative">
         <div
+          className="absolute w-full h-full -z-50"
           style={{
-            background: homepage.data.background_noise
-              ? "url(/Noise&Texture.webp)"
-              : "",
-            zIndex: 1,
+            color: homepage.data.text_color || "",
+            background: homepage.data.background_color || "",
           }}
-        >
-          <Header uid={headerUID} />
-          <SliceZone slices={homepage.data.slices} components={components} />
-          <Footer uid={footerUID} />
-        </div>
+        />
+        {morphing_effect && (
+          <Morphing
+            dissolveColor={homepage.data.background_color || "#000000"}
+            className="-z-40 absolute h-full w-full"
+          ></Morphing>
+        )}
+
+        {background_noise && (
+          <div
+            className="absolute h-full w-full -z-30"
+            style={{
+              background: "url(/Noise&Texture.webp)",
+            }}
+          />
+        )}
+
+        <Header uid={headerUID} />
+        <SliceZone slices={homepage.data.slices} components={components} />
+        <Footer uid={footerUID} />
       </div>
     </>
   );
