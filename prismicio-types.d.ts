@@ -680,6 +680,26 @@ export interface CardsSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
+   * Title Color field in *Cards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_color: prismic.ColorField;
+
+  /**
+   * title background color field in *Cards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.title_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  title_background_color: prismic.ColorField;
+
+  /**
    * Heading field in *Cards → Primary*
    *
    * - **Field Type**: Rich Text
@@ -688,6 +708,36 @@ export interface CardsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.RichTextField;
+
+  /**
+   * Card Title Color field in *Cards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.card_title_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  card_title_color: prismic.ColorField;
+
+  /**
+   * Card Content Color field in *Cards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.card_content_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  card_content_color: prismic.ColorField;
+
+  /**
+   * Card Background Color field in *Cards → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cards.primary.card_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  card_background_color: prismic.ColorField;
 }
 
 /**

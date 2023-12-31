@@ -19,6 +19,20 @@
             "placeholder": ""
           }
         },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Title Color",
+            "placeholder": ""
+          }
+        },
+        "title_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "title background color",
+            "placeholder": ""
+          }
+        },
         "heading": {
           "type": "StructuredText",
           "config": {
@@ -27,6 +41,27 @@
             "allowTargetBlank": true,
             "multi": "heading2,em,strong"
           }
+        },
+        "card_title_color": {
+          "type": "Color",
+          "config": {
+            "label": "Card Title Color",
+            "placeholder": ""
+          }
+        },
+        "card_content_color": {
+          "type": "Color",
+          "config": {
+            "label": "Card Content Color",
+            "placeholder": ""
+          }
+        },
+        "card_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Card Background Color",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -34,7 +69,10 @@
           "type": "Image",
           "config": {
             "label": "Card Icon",
-            "constraint": {},
+            "constraint": {
+              "width": 50,
+              "height": 50
+            },
             "thumbnails": []
           }
         },

@@ -13,7 +13,7 @@ export type NavigationProps = SliceComponentProps<Content.NavigationSlice>;
 const Navigation = ({
   slice,
   //@ts-ignore
-  context: { orientation },
+  context: { orientation, navigation_items_color },
 }: NavigationProps): JSX.Element => {
   return (
     <section
@@ -25,7 +25,10 @@ const Navigation = ({
           {slice.items.map(({ name, link }) => (
             <PrismicNextLink
               className="navigation-item text-xl block"
-              style={{ paddingRight: "50px" }}
+              style={{
+                paddingRight: "50px",
+                color: navigation_items_color || "inherit",
+              }}
               field={link}
               key={name}
             >
@@ -40,6 +43,7 @@ const Navigation = ({
             <PrismicNextLink
               className="navigation-item text-2xl block text-center py-8"
               field={link}
+              style={{ color: navigation_items_color }}
             >
               {name}
             </PrismicNextLink>

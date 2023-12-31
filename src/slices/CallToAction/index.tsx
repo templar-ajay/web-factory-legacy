@@ -82,18 +82,20 @@ const CallToAction = ({
             backgroundColor: action_button_background || "#dac682",
             color: action_text_color || "#000000",
           }}
-          className="block max-w-md mx-auto text-3xl leading-relaxed py-7 px-14 mt-14 mb-10 font-light rounded-xl arrow-button"
+          className="block max-w-md mx-auto text-2xl mobile:text-3xl leading-relaxed  py-4 mobile:py-7 px-8 mobile:px-14 mt-14 mb-10 font-light rounded-xl arrow-button"
           field={slice.primary.action_button_link}
         >
-          <div className="flex justify-between items-center">
+          <div className="flex justify-evenly mobile:justify-between items-center">
             <div className="block">{slice.primary.action_button_text}</div>
-            <Image
-              className="block arrow-icon"
-              src="longArrow.svg"
-              width="130"
-              height="20"
-              alt="long arrow"
-            />
+            <div className="max-w-[18vw] mobile:max-w-[130px]">
+              <Image
+                className="block arrow-icon"
+                src="longArrow.svg"
+                width="130"
+                height="20"
+                alt="long arrow"
+              />
+            </div>
           </div>
         </PrismicNextLink>
       </div>
@@ -105,7 +107,7 @@ const CallToAction = ({
           field={slice.primary.link_to_email}
         >
           <PrismicNextImage
-            className="inline-block mr-3 "
+            className="inline-block mr-3"
             field={slice.primary.email_icon}
           />
           {slice.primary.email}

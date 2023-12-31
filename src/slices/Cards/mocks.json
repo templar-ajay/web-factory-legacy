@@ -18,6 +18,31 @@
 						}
 					}
 				]
+			},
+			"title_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#980ffd",
+				"type": "Color"
+			},
+			"title_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#ec5235",
+				"type": "Color"
+			},
+			"card_title_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#78fc37",
+				"type": "Color"
+			},
+			"card_content_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#b28e85",
+				"type": "Color"
+			},
+			"card_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#296710",
+				"type": "Color"
 			}
 		},
 		"items": [
@@ -27,16 +52,15 @@
 					[
 						"card_icon",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
-								"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-								"width": 4000,
-								"height": 4000
+								"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+								"width": 3424,
+								"height": 3424
 							},
-							"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-							"width": 4000,
-							"height": 4000,
+							"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=0%2C0%2C3424%2C3424&w=50&h=50",
+							"width": 50,
+							"height": 50,
 							"edit": {
 								"zoom": 1,
 								"crop": {
@@ -45,6 +69,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],

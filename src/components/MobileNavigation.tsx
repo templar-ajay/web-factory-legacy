@@ -9,6 +9,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import clsx from "clsx";
 
 type MobileNavigationProps = {
+  context: any;
   hamburger_icon_color: any;
   slices: any;
   cta_link: any;
@@ -18,6 +19,7 @@ type MobileNavigationProps = {
 };
 
 const MobileNavigation = ({
+  context,
   hamburger_icon_color,
   slices,
   cta_link,
@@ -55,7 +57,10 @@ const MobileNavigation = ({
             {slices[0] && (
               <div className="block w-full">
                 <Navigation
-                  context={{ orientation: "mobile" }}
+                  context={{
+                    orientation: "mobile",
+                    navigation_items_color: navigation_items_color,
+                  }}
                   index={0}
                   slices={slices}
                   slice={slices[0]}

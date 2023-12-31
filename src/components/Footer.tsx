@@ -32,7 +32,7 @@ export default async function Footer({ uid }: FooterProps) {
             className="relative !py-8 sm:!py-8 md:!py-8 lg:!py-8 px-4 md:px-6"
           >
             <div
-              className="flex justify-between"
+              className="flex justify-between flex-col mobile:flex-row items-center gap-y-5"
               style={{ color: footer_text_color || secondary_color || "white" }}
             >
               <div>
