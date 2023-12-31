@@ -101,7 +101,7 @@ const Cards = async ({
         {slice.items.map(({ card_content, card_icon, card_title }, index) => (
           <div
             key={index + "_" + card_title}
-            className="flex flex-col py-6 px-10 rounded-[30px] !transition-shadow duration-300 hover:!shadow-slate-800/40"
+            className="flex flex-col py-6 px-5 mobile:px-10 rounded-[30px] !transition-shadow duration-300 hover:!shadow-slate-800/40"
             style={{
               background: slice.primary.card_background_color || "transparent",
             }}
