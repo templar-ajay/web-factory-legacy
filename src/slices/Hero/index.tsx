@@ -30,7 +30,7 @@ const getComponents: componentsType = ({ text_color = "inherit" }: any) => {
         <Heading
           as="h1"
           size="xxs"
-          className="!font-thin tracking-widest font-display text-center mb-5"
+          className="!font-light tracking-widest font-display text-center mb-5"
           color={text_color}
         >
           {children}
