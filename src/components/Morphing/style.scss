@@ -20,36 +20,45 @@ body {
 @keyframes moveInCircle {
   0% {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   50% {
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
 @keyframes moveVertical {
   0% {
     transform: translateY(-50vh);
+    -webkit-transform: translateY(-50vh);
   }
   50% {
     transform: translateY(50vh);
+    -webkit-transform: translateY(50vh);
   }
   100% {
     transform: translateY(-50vh);
+    -webkit-transform: translateY(-50vh);
   }
 }
 
 @keyframes moveHorizontal {
   0% {
     transform: translateX(-50%) translateY(-10%);
+    -webkit-transform: translateX(-50%) translateY(-10%);
   }
   50% {
     transform: translateX(50%) translateY(10%);
+    -webkit-transform: translateX(50%) translateY(10%);
   }
   100% {
     transform: translateX(-50%) translateY(-10%);
+    -webkit-transform: translateX(-50%) translateY(-10%);
   }
 }
 .gradient-top {
@@ -72,6 +81,7 @@ body {
 
   .gradients-container {
     filter: url(#goo) blur(40px);
+    -webkit-filter: url(#goo) blur(40px);
     width: 100%;
     height: 100%;
   }
@@ -93,7 +103,9 @@ body {
     left: calc(50% - var(--circle-size) / 2);
 
     transform-origin: center center;
+    -webkit-transform-origin: center center;
     animation: moveVertical 60s ease infinite;
+    -webkit-animation: moveVertical 60s ease infinite;
 
     opacity: 1;
   }
@@ -115,7 +127,9 @@ body {
     left: calc(50% - var(--circle-size) / 2);
 
     transform-origin: calc(50% - 400px);
+    -webkit-transform-origin: calc(50% - 400px);
     animation: moveInCircle 40s reverse infinite;
+    -webkit-animation: moveInCircle 40s reverse infinite;
 
     opacity: 1;
   }
@@ -139,7 +153,9 @@ body {
     left: calc(50% - var(--circle-size) / 2 - 500px);
 
     transform-origin: calc(50% + 400px);
+    -webkit-transform-origin: calc(50% + 400px);
     animation: moveInCircle 80s linear infinite;
+    -webkit-animation: moveInCircle 80s linear infinite;
 
     opacity: 1;
   }
@@ -161,7 +177,9 @@ body {
     left: calc(50% - var(--circle-size) / 2);
 
     transform-origin: calc(50% - 200px);
+    -webkit-transform-origin: calc(50% - 200px);
     animation: moveHorizontal 80s ease infinite;
+    -webkit-animation: moveHorizontal 80s ease infinite;
 
     opacity: 0.7;
   }
@@ -183,7 +201,9 @@ body {
     left: calc(50% - var(--circle-size));
 
     transform-origin: calc(50% - 800px) calc(50% + 200px);
+    -webkit-transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 40s ease infinite;
+    -webkit-animation: moveInCircle 40s ease infinite;
 
     opacity: 1;
   }
@@ -196,6 +216,7 @@ body {
         rgba(var(--color-interactive), 0) 50%
       )
       no-repeat;
+
     mix-blend-mode: var(--blending);
 
     width: 100%;
