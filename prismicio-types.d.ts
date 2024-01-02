@@ -827,6 +827,46 @@ export interface HeroSliceDefaultPrimary {
   heading_h2: prismic.RichTextField;
 
   /**
+   * Content field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Content Alignment field in *Hero → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.content_alignment
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  content_alignment: prismic.SelectField<"Left" | "Center">;
+
+  /**
+   * Content Text Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.content_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  content_text_color: prismic.ColorField;
+
+  /**
+   * Bold Content Text Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.bold_content_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bold_content_text_color: prismic.ColorField;
+
+  /**
    * CTA Text field in *Hero → Primary*
    *
    * - **Field Type**: Text

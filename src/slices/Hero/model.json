@@ -30,6 +30,40 @@
             "single": "heading2,strong,em,hyperlink"
           }
         },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "content_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Content Alignment",
+            "placeholder": "",
+            "options": [
+              "Left",
+              "Center"
+            ]
+          }
+        },
+        "content_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Content Text Color",
+            "placeholder": ""
+          }
+        },
+        "bold_content_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Bold Content Text Color",
+            "placeholder": ""
+          }
+        },
         "cta_text": {
           "type": "Text",
           "config": {

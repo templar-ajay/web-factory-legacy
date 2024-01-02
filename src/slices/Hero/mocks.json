@@ -36,6 +36,32 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Occaecat voluptate commodo sunt dolore ipsum id mollit qui nostrud nostrud commodo ea cillum labore. Nulla id anim ut et magna consequat sit elit qui. Officia consequat minim consequat cupidatat occaecat irure nostrud et magna veniam ad excepteur ut."
+						}
+					}
+				]
+			},
+			"content_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#b1a682",
+				"type": "Color"
+			},
+			"bold_content_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#668080",
+				"type": "Color"
+			},
+			"content_alignment": {
+				"__TYPE__": "FieldContent",
+				"value": "Center",
+				"type": "Select"
 			}
 		},
 		"items": [

@@ -8,17 +8,23 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
+import clsx from "clsx";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
-const getComponents: componentsType = ({ text_color = "inherit" }: any) => {
+const getComponents: componentsType = ({
+  text_color = "inherit",
+  paragraph_color = "inherit",
+  strong_color = "inherit",
+  content_alignment,
+}: any) => {
   return {
     heading2: ({ children }: any) => {
       return (
         <Heading
           as="h2"
           size="lg"
-          className="font-light tracking-tight leading-tight text-xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
+          className="font-normal tracking-tight leading-tight text-xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
           color={text_color}
         >
           {children}
@@ -51,11 +57,19 @@ const getComponents: componentsType = ({ text_color = "inherit" }: any) => {
     },
     paragraph: ({ children }: any) => (
       <Paragraph
-        className="text-center text-lg md:text-xl text-black-500 mt-8 mb-10"
-        color={text_color}
+        className={clsx(
+          content_alignment == "Center" && "text-center",
+          "text-lg md:text-xl text-black-500 font-semibold mt-8"
+        )}
+        color={paragraph_color || text_color}
       >
         {children}
       </Paragraph>
+    ),
+    strong: ({ children }: { children: any }) => (
+      <strong style={{ color: strong_color || text_color || "inherit" }}>
+        {children}
+      </strong>
     ),
   };
 };
@@ -76,6 +90,10 @@ const Hero = ({
 }: HeroProps): JSX.Element => {
   const components = getComponents({
     text_color: page_default_text_color,
+    strong_color: slice.primary.bold_content_text_color,
+    paragraph_color: slice.primary.content_text_color,
+
+    content_alignment: slice.primary.content_alignment,
   });
   return (
     <Bounded
@@ -91,6 +109,12 @@ const Hero = ({
       <div>
         <PrismicRichText
           field={slice.primary.heading_h2}
+          components={components}
+        />
+      </div>
+      <div>
+        <PrismicRichText
+          field={slice.primary.content}
           components={components}
         />
       </div>
