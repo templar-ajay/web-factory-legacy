@@ -1,12 +1,9 @@
-"use client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { getHeader, getSettings } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "@/slices/Navigation";
-import { Burger } from "./SVG";
-import { useState } from "react";
 import MobileNavigation from "./MobileNavigation";
 
 type HeaderParams = {
@@ -14,11 +11,6 @@ type HeaderParams = {
 };
 
 export default async function Header({ uid }: HeaderParams) {
-  const [navOpen, setNavOpen] = useState(false);
-  function handleBurgerClick() {
-    setNavOpen(!navOpen);
-  }
-
   const header = await getHeader(uid);
   const settings = await getSettings();
 
