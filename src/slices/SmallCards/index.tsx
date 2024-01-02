@@ -1,6 +1,7 @@
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -77,18 +78,25 @@ const SmallCards = ({
       data-slice-variation={slice.variation}
     >
       <div className="mb-16">
-        <PrismicRichText field={slice.primary.title} components={components} />
+        <Reveal width="100%" delay={0.1}>
+          <PrismicRichText
+            field={slice.primary.title}
+            components={components}
+          />
+        </Reveal>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-14 gap-y-11">
         {slice.items.map(({ card_icon, card_title, card_content }, index) => (
-          <div className="flex flex-col items-center">
-            <div className="w-[72px] h-[72px] min-h-[72px] min-w-[72px] border-solid border-1 border-[#432e2e] mb-8 p-[10px] rounded-[4px] flex justify-center items-center">
-              <PrismicNextImage field={card_icon} />
+          <Reveal>
+            <div className="flex flex-col items-center">
+              <div className="w-[72px] h-[72px] min-h-[72px] min-w-[72px] border-solid border-1 border-[#432e2e] mb-8 p-[10px] rounded-[4px] flex justify-center items-center">
+                <PrismicNextImage field={card_icon} />
+              </div>
+              <PrismicRichText field={card_title} components={components} />
+              <PrismicRichText field={card_content} components={components} />
             </div>
-            <PrismicRichText field={card_title} components={components} />
-            <PrismicRichText field={card_content} components={components} />
-          </div>
+          </Reveal>
         ))}
       </div>
     </Bounded>

@@ -1,5 +1,6 @@
 import Bounded from "@/components/Bounded";
 import Para from "@/components/Paragraph";
+import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
 import {
   JSXMapSerializer,
@@ -43,13 +44,19 @@ const Paragraph = ({
   const components = getComponents({
     paragraph_color: page_default_text_color,
   });
+
   return (
     <Bounded
       className="max-w-3xl px-10 mx-auto"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <PrismicRichText field={slice.primary.content} components={components} />
+      <Reveal>
+        <PrismicRichText
+          field={slice.primary.content}
+          components={components}
+        />
+      </Reveal>
     </Bounded>
   );
 };

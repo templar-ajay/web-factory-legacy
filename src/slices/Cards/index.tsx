@@ -2,6 +2,7 @@ import { hexToRGB } from "@/app/utils";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -82,40 +83,47 @@ const Cards = async ({
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div
-        className="mx-auto w-fit rounded-full py-2 px-5 text-lg mb-4"
-        style={{
-          color: slice.primary.title_color || "#a5d18e",
-          backgroundColor: slice.primary.title_background_color || "#f0f8ec",
-        }}
-      >
-        {slice.primary.title}
-      </div>
+      <Reveal width="!00%" delay={0.1}>
+        <div
+          className="mx-auto w-fit rounded-full py-2 px-5 text-lg mb-4"
+          style={{
+            color: slice.primary.title_color || "#a5d18e",
+            backgroundColor: slice.primary.title_background_color || "#f0f8ec",
+          }}
+        >
+          {slice.primary.title}
+        </div>
+      </Reveal>
       <div className="max-w-lg mx-auto mb-16">
-        <PrismicRichText
-          field={slice.primary.heading}
-          components={components}
-        />
+        <Reveal delay={0.15}>
+          <PrismicRichText
+            field={slice.primary.heading}
+            components={components}
+          />
+        </Reveal>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {slice.items.map(({ card_content, card_icon, card_title }, index) => (
-          <div
-            key={index + "_" + card_title}
-            className="flex flex-col py-6 px-5 mobile:px-10 rounded-[30px] !transition-shadow duration-300 hover:!shadow-slate-800/40"
-            style={{
-              background: slice.primary.card_background_color || "transparent",
-            }}
-          >
-            <div className="mx-auto w-fit relative mb-8">
-              <div
-                className="translate-x-4 translate-y-4 w-6 h-6 absolute"
-                style={{ boxShadow: `-1px 14px 40px ${false || "#ffbe32"}` }}
-              ></div>
-              <PrismicNextImage field={card_icon} />
+          <Reveal>
+            <div
+              key={index + "_" + card_title}
+              className="flex flex-col py-6 px-5 mobile:px-10 rounded-[30px] !transition-shadow duration-300 hover:!shadow-slate-800/40"
+              style={{
+                background:
+                  slice.primary.card_background_color || "transparent",
+              }}
+            >
+              <div className="mx-auto w-fit relative mb-8">
+                <div
+                  className="translate-x-4 translate-y-4 w-6 h-6 absolute"
+                  style={{ boxShadow: `-1px 14px 40px ${false || "#ffbe32"}` }}
+                ></div>
+                <PrismicNextImage field={card_icon} />
+              </div>
+              <PrismicRichText field={card_title} components={components} />
+              <PrismicRichText field={card_content} components={components} />
             </div>
-            <PrismicRichText field={card_title} components={components} />
-            <PrismicRichText field={card_content} components={components} />
-          </div>
+          </Reveal>
         ))}
       </div>
     </Bounded>

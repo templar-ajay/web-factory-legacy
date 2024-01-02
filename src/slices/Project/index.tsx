@@ -2,6 +2,7 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import ProjectCTA from "@/components/ProjectCTA";
+import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import {
@@ -87,26 +88,36 @@ const Project = ({
       >
         <div className="flex-wrap lg:flex !gap-[4%] my-[80px]">
           <div className="w-full max-w-2xl mx-auto lg:w-[36%] mb-28 lg:mb-0 ">
-            <PrismicRichText
-              field={slice.primary.title}
-              components={components}
-            />
-            <PrismicRichText
-              field={slice.primary.description}
-              components={components}
-            />
+            <Reveal delay={0} width="100%">
+              <PrismicRichText
+                field={slice.primary.title}
+                components={components}
+              />
+            </Reveal>
+            <Reveal delay={0.2}>
+              <PrismicRichText
+                field={slice.primary.description}
+                components={components}
+              />
+            </Reveal>
             <div className="block w-fit mx-auto lg:mx-0">
-              <ProjectCTA style={{ color: page_default_text_color || "#fff" }}>
-                {slice.primary.cta_text}
-              </ProjectCTA>
+              <Reveal className="block" delay={0.5}>
+                <ProjectCTA
+                  style={{ color: page_default_text_color || "#fff" }}
+                >
+                  {slice.primary.cta_text}
+                </ProjectCTA>
+              </Reveal>
             </div>
           </div>
           <div className="w-full lg:w-[60%]">
             <div className="lg:w-[80%] flex justify-end relative">
-              <PrismicNextImage
-                className="z-10 lg:translate-x-[120px] rounded-2xl"
-                field={slice.primary.laptop_size_project_screenshot}
-              />
+              <Reveal>
+                <PrismicNextImage
+                  className="z-10 lg:translate-x-[120px] rounded-2xl"
+                  field={slice.primary.laptop_size_project_screenshot}
+                />
+              </Reveal>
               <PrismicNextImage
                 className="absolute lg:scale-80 max-w-[10rem] sm:max-w-[15rem] lg:max-w-[20rem]  z-20 left-0 -bottom-48 mobile:-bottom-20 rounded-2xl"
                 field={slice.primary.mobile_size_project_screenshot}
@@ -138,30 +149,34 @@ const Project = ({
                   />
                 </svg>
               </div>
-              <PrismicRichText
-                field={slice.primary.clients_review}
-                components={{
-                  paragraph: ({ children }) => (
-                    <Paragraph
-                      className="font-extralight text-md mobile:text-lg md:text-xl leading-9 text-center mx-auto md:ml-0 max-w-xl md:max-w-2xl md:text-left"
-                      color={page_default_text_color || "inherit"}
-                    >
-                      {children}
-                    </Paragraph>
-                  ),
-                }}
-              />
-              <div
-                className="mt-6 mobile:mt-8 md:mt-12"
-                style={{ color: page_default_text_color || "inherit" }}
-              >
-                <p className="text-xl md:text-2xl text-center md:text-left font-bold">
-                  {slice.primary.clients_name}
-                </p>
-                <p className="text-sm mobile:text-md md:text-lg text-center md:text-left mt-1 font-light">
-                  {slice.primary.clients_professional_title}
-                </p>
-              </div>
+              <Reveal>
+                <PrismicRichText
+                  field={slice.primary.clients_review}
+                  components={{
+                    paragraph: ({ children }) => (
+                      <Paragraph
+                        className="font-extralight text-md mobile:text-lg md:text-xl leading-9 text-center mx-auto md:ml-0 max-w-xl md:max-w-2xl md:text-left"
+                        color={page_default_text_color || "inherit"}
+                      >
+                        {children}
+                      </Paragraph>
+                    ),
+                  }}
+                />
+              </Reveal>
+              <Reveal>
+                <div
+                  className="mt-6 mobile:mt-8 md:mt-12"
+                  style={{ color: page_default_text_color || "inherit" }}
+                >
+                  <p className="text-xl md:text-2xl text-center md:text-left font-bold">
+                    {slice.primary.clients_name}
+                  </p>
+                  <p className="text-sm mobile:text-md md:text-lg text-center md:text-left mt-1 font-light">
+                    {slice.primary.clients_professional_title}
+                  </p>
+                </div>
+              </Reveal>
             </div>
           </div>
         </div>

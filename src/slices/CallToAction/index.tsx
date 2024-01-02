@@ -8,8 +8,8 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
-import { components } from "..";
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
@@ -75,43 +75,49 @@ const CallToAction = ({
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <PrismicRichText field={slice.primary.call} components={components} />
-      <div className="arrow-box">
-        <PrismicNextLink
-          style={{
-            backgroundColor: action_button_background || "#dac682",
-            color: action_text_color || "#000000",
-          }}
-          className="block max-w-md mx-auto text-2xl mobile:text-3xl leading-relaxed  py-4 mobile:py-7 px-8 mobile:px-14 mt-14 mb-10 font-light rounded-xl arrow-button"
-          field={slice.primary.action_button_link}
-        >
-          <div className="flex justify-evenly mobile:justify-between items-center">
-            <div className="block">{slice.primary.action_button_text}</div>
-            <div className="max-w-[18vw] mobile:max-w-[130px]">
-              <Image
-                className="block arrow-icon"
-                src="longArrow.svg"
-                width="130"
-                height="20"
-                alt="long arrow"
-              />
+      <Reveal width="100%">
+        <PrismicRichText field={slice.primary.call} components={components} />
+      </Reveal>
+      <Reveal width="100%" delay={0.3}>
+        <div className="arrow-box">
+          <PrismicNextLink
+            style={{
+              backgroundColor: action_button_background || "#dac682",
+              color: action_text_color || "#000000",
+            }}
+            className="block max-w-md mx-auto text-2xl mobile:text-3xl leading-relaxed  py-4 mobile:py-7 px-8 mobile:px-14 mt-14 mb-10 font-light rounded-xl arrow-button"
+            field={slice.primary.action_button_link}
+          >
+            <div className="flex justify-evenly mobile:justify-between items-center">
+              <div className="block">{slice.primary.action_button_text}</div>
+              <div className="max-w-[18vw] mobile:max-w-[130px]">
+                <Image
+                  className="block arrow-icon"
+                  src="longArrow.svg"
+                  width="130"
+                  height="20"
+                  alt="long arrow"
+                />
+              </div>
             </div>
-          </div>
-        </PrismicNextLink>
-      </div>
+          </PrismicNextLink>
+        </div>
+      </Reveal>
 
       <div className="email mx-auto text-center text-xl ">
-        <PrismicNextLink
-          style={{ color: page_default_text_color }}
-          className="py-5"
-          field={slice.primary.link_to_email}
-        >
-          <PrismicNextImage
-            className="inline-block mr-3"
-            field={slice.primary.email_icon}
-          />
-          {slice.primary.email}
-        </PrismicNextLink>
+        <Reveal width="100%" delay={3} distance={20}>
+          <PrismicNextLink
+            style={{ color: page_default_text_color }}
+            className="py-5"
+            field={slice.primary.link_to_email}
+          >
+            <PrismicNextImage
+              className="inline-block mr-3"
+              field={slice.primary.email_icon}
+            />
+            {slice.primary.email}
+          </PrismicNextLink>
+        </Reveal>
       </div>
     </Bounded>
   );

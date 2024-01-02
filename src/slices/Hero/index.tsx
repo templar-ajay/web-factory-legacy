@@ -1,6 +1,7 @@
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import {
@@ -9,6 +10,7 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import clsx from "clsx";
+import { Revalia } from "next/font/google";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
@@ -100,7 +102,7 @@ const Hero = ({
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="max-w-[700px] mt-[80px] md:mt-0 mx-auto">
+      <div className="max-w-[700px] mt-[80px] md:mt-0 mx-auto animate-fade-in duration-500">
         <PrismicRichText
           field={slice.primary.bond_text}
           components={components}
