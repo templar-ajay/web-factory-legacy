@@ -47,6 +47,13 @@
             "label": "Left",
             "placeholder": ""
           }
+        },
+        "max_width": {
+          "type": "Number",
+          "config": {
+            "label": "Max Width",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

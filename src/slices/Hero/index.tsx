@@ -26,7 +26,7 @@ const getComponents: componentsType = ({
         <Heading
           as="h2"
           size="lg"
-          className="font-normal tracking-tight leading-tight text-xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
+          className="font-normal tracking-tight leading-tight text-2xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
           color={text_color}
         >
           {children}

@@ -14,6 +14,7 @@ export type SmallBackgroundImageProps =
 const SmallBackgroundImage = ({
   slice,
   slices,
+  context,
 }: SmallBackgroundImageProps): JSX.Element => {
   return (
     // <section
@@ -24,12 +25,13 @@ const SmallBackgroundImage = ({
     //   {slice.variation}) Slices
     // </section>
     <div
-      className="max-w-[100px] absolute -z-10"
+      className="absolute -z-10"
       style={{
         top: slice.primary.top + "px",
         right: slice.primary.right + "px",
         bottom: slice.primary.bottom + "px",
         left: slice.primary.left + "px",
+        maxWidth: slice.primary.max_width + "px",
       }}
     >
       <PrismicNextImage

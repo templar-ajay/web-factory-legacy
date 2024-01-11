@@ -4,7 +4,6 @@
 		"variation": "default",
 		"primary": {
 			"small_background_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
@@ -22,6 +21,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"top": {
@@ -42,6 +44,11 @@
 			"left": {
 				"__TYPE__": "FieldContent",
 				"value": "55",
+				"type": "Number"
+			},
+			"max_width": {
+				"__TYPE__": "FieldContent",
+				"value": "21",
 				"type": "Number"
 			}
 		},

@@ -1114,6 +1114,16 @@ export interface ProjectSliceDefaultPrimary {
   mobile_size_project_screenshot: prismic.ImageField<never>;
 
   /**
+   * Background Of Small Images field in *Project → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.primary.background_of_small_images
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
+
+  /**
    * Clients Review field in *Project → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1237,6 +1247,16 @@ export interface SmallBackgroundImageSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#number
    */
   left: prismic.NumberField;
+
+  /**
+   * Max Width field in *SmallBackgroundImage → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_background_image.primary.max_width
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  max_width: prismic.NumberField;
 }
 
 /**

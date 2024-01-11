@@ -1,16 +1,17 @@
+import BackgroundOfSmallImages from "@/components/BackgroundOfSmallImages";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
 import ProjectCTA from "@/components/ProjectCTA";
 import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
+import { createClient } from "@/prismicio";
 import { PrismicNextImage } from "@prismicio/next";
 import {
   JSXMapSerializer,
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react";
-import Image from "next/image";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
@@ -70,23 +71,43 @@ export type ProjectProps = SliceComponentProps<Content.ProjectSlice>;
 /**
  * Component for "Project" Slices.
  */
-const Project = ({
+const Project = async ({
   slice,
   //@ts-ignore
   context: { page_default_text_color },
-}: ProjectProps): JSX.Element => {
+}: ProjectProps): Promise<JSX.Element> => {
   const components = getComponents({
     h2_color: page_default_text_color,
     h3_color: page_default_text_color,
     paragraph_color: page_default_text_color,
   });
+
+  const backgroundOfSmallImagesUID =
+    //@ts-ignore
+    slice.primary.background_of_small_images?.uid;
+
+  const client = createClient();
+  const backgroundOfSmallImages = backgroundOfSmallImagesUID
+    ? await client.getByUID(
+        "background_of_small_images",
+        backgroundOfSmallImagesUID
+      )
+    : null;
+
   return (
     <>
+      <div className="h-[100vh] w-[100vw] absolute">
+        <div className="relative w-full h-full">
+          {backgroundOfSmallImages && (
+            <BackgroundOfSmallImages data={backgroundOfSmallImages.data} />
+          )}
+        </div>
+      </div>
       <Bounded
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        <div className="flex-wrap lg:flex !gap-[4%] my-[80px]">
+        <div className="relative flex-wrap lg:flex !gap-[4%] my-[80px]">
           <div className="w-full max-w-2xl mx-auto lg:w-[36%] mb-28 lg:mb-0 ">
             <Reveal delay={0} width="100%">
               <PrismicRichText

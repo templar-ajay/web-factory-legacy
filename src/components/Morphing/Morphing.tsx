@@ -37,6 +37,7 @@ const Morphing = ({
             </filter>
           </defs>
         </svg>
+
         <div className="gradients-container">
           <div className="g1" />
           <div className="g2" />

@@ -4,6 +4,14 @@ body {
   padding: 0;
 }
 
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+  opacity: 0.7;
+}
+
 :root {
   --color-bg1: rgb(108, 0, 162);
   --color-bg2: rgb(0, 17, 82);
@@ -19,22 +27,22 @@ body {
 
 @keyframes moveInCircle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
     -webkit-transform: rotate(0deg);
   }
   50% {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     -webkit-transform: rotate(180deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
     -webkit-transform: rotate(360deg);
   }
 }
 
 @keyframes moveVertical {
   0% {
-    transform: translateY(-50vh);
+    transform: translateY(-55vh);
     -webkit-transform: translateY(-50vh);
   }
   50% {
@@ -101,8 +109,10 @@ body {
     width: var(--circle-size);
     height: var(--circle-size);
     // top: calc(50% - var(--circle-size) / 2);
-    top: calc(max(20% - var(--circle-size) / 2, 100vh - var(--circle-size)));
-    left: calc(50% - var(--circle-size) / 2);
+    // top: calc(max(20% - var(--circle-size) / 2, 100vh - var(--circle-size)));
+    // left: calc(50% - var(--circle-size) / 2);
+    top: calc(max(10% - var(--circle-size) / 2, 80vh - var(--circle-size)));
+    left: calc(40% - var(--circle-size) / 2);
 
     @supports not (-webkit-touch-callout: none) {
       /* CSS for other than iOS devices */
@@ -120,8 +130,6 @@ body {
         -webkit-animation: moveInCircle 40s reverse infinite;
       }
     }
-
-    opacity: 1;
   }
 
   .g2 {
@@ -139,8 +147,10 @@ body {
     width: var(--circle-size);
     height: var(--circle-size);
     // top: calc(50% - var(--circle-size) / 2);
-    top: calc(max(20% - var(--circle-size) / 2, 100vh - var(--circle-size)));
-    left: calc(50% - var(--circle-size) / 2);
+    // top: calc(max(20% - var(--circle-size) / 2, 100vh - var(--circle-size)));
+    // left: calc(50% - var(--circle-size) / 2);
+    top: calc(max(25% - var(--circle-size) / 2, 70vh - var(--circle-size)));
+    left: calc(60% - var(--circle-size) / 2);
 
     @supports not (-webkit-touch-callout: none) {
       /* CSS for other than iOS devices */
@@ -159,8 +169,6 @@ body {
         -webkit-animation: moveInCircle 40s reverse infinite;
       }
     }
-
-    opacity: 1;
   }
 
   .g3 {
@@ -178,10 +186,12 @@ body {
     width: var(--circle-size);
     height: var(--circle-size);
     // top: calc(50% - var(--circle-size) / 2 + 200px);
-    top: calc(
-      max(20% - var(--circle-size) / 2 + 200px, 50vh - var(--circle-size))
-    );
-    left: calc(50% - var(--circle-size) / 2 - 500px);
+    // top: calc(
+    //   max(20% - var(--circle-size) / 2 + 200px, 50vh - var(--circle-size))
+    // );
+    // left: calc(50% - var(--circle-size) / 2 - 500px);
+    top: calc(max(15% - var(--circle-size) / 2, 60vh - var(--circle-size)));
+    left: calc(30% - var(--circle-size) / 2);
 
     @supports not (-webkit-touch-callout: none) {
       /* CSS for other than iOS devices */
@@ -199,8 +209,6 @@ body {
         -webkit-animation: moveInCircle 80s linear infinite;
       }
     }
-
-    opacity: 1;
   }
 
   .g4 {
@@ -218,8 +226,10 @@ body {
     width: var(--circle-size);
     height: var(--circle-size);
     // top: calc(50% - var(--circle-size) / 2);
-    top: calc(max(20% - var(--circle-size) / 2, 50vh - var(--circle-size)));
-    left: calc(50% - var(--circle-size) / 2);
+    // top: calc(max(20% - var(--circle-size) / 2, 50vh - var(--circle-size)));
+    // left: calc(50% - var(--circle-size) / 2);
+    top: calc(max(30% - var(--circle-size) / 2, 50vh - var(--circle-size)));
+    left: calc(70% - var(--circle-size) / 2);
 
     @supports not (-webkit-touch-callout: none) {
       /* CSS for other than iOS devices */
@@ -237,8 +247,6 @@ body {
         -webkit-animation: moveHorizontal 80s ease infinite;
       }
     }
-
-    opacity: 0.7;
   }
 
   .g5 {
@@ -255,7 +263,9 @@ body {
     width: calc(var(--circle-size) * 2);
     height: calc(var(--circle-size) * 2);
     // top: calc(50% - var(--circle-size));
-    top: calc(max(30% - var(--circle-size), 40vh - var(--circle-size) * 2));
+    // top: calc(max(30% - var(--circle-size), 40vh - var(--circle-size) * 2));
+    // left: calc(50% - var(--circle-size));
+    top: calc(max(20% - var(--circle-size) / 2, 40vh - var(--circle-size) * 2));
     left: calc(50% - var(--circle-size));
 
     @supports not (-webkit-touch-callout: none) {
@@ -274,8 +284,6 @@ body {
         -webkit-animation: moveInCircle 40s ease infinite;
       }
     }
-
-    opacity: 1;
   }
 
   .interactive {
@@ -293,7 +301,5 @@ body {
     height: 100%;
     top: -50%;
     left: -50%;
-
-    opacity: 0.7;
   }
 }

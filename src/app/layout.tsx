@@ -73,7 +73,12 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={clsx(body.variable, display.variable, montserrat.variable)}
+        className={clsx(
+          body.variable,
+          display.variable,
+          montserrat.variable,
+          "overflow-x-hidden"
+        )}
       >
         <Providers>
           <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />

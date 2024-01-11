@@ -53,6 +53,16 @@
             "thumbnails": []
           }
         },
+        "background_of_small_images": {
+          "type": "Link",
+          "config": {
+            "label": "Background Of Small Images",
+            "select": "document",
+            "customtypes": [
+              "background_of_small_images"
+            ]
+          }
+        },
         "clients_review": {
           "type": "StructuredText",
           "config": {
