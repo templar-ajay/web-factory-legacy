@@ -80,10 +80,8 @@ export default async function RootLayout({
           "overflow-x-hidden"
         )}
       >
-        <Providers>
-          <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
-          {children}
-        </Providers>
+        <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
+        <Providers>{children}</Providers>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>

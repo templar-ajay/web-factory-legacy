@@ -10,7 +10,6 @@ import {
   SliceComponentProps,
 } from "@prismicio/react";
 import clsx from "clsx";
-import { Revalia } from "next/font/google";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
