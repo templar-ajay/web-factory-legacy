@@ -211,43 +211,43 @@ body {
     }
   }
 
-  .g4 {
-    position: absolute;
+  //   .g4 {
+  //     position: absolute;
 
-    background-image: radial-gradient(
-        circle at center,
-        rgba(var(--color4), 0.8) 0,
-        rgba(var(--color4), 0) 50%
-      )
-      no-repeat;
+  //     background-image: radial-gradient(
+  //         circle at center,
+  //         rgba(var(--color4), 0.8) 0,
+  //         rgba(var(--color4), 0) 50%
+  //       )
+  //       no-repeat;
 
-    mix-blend-mode: var(--blending);
+  //     mix-blend-mode: var(--blending);
 
-    width: var(--circle-size);
-    height: var(--circle-size);
-    // top: calc(50% - var(--circle-size) / 2);
-    // top: calc(max(20% - var(--circle-size) / 2, 50vh - var(--circle-size)));
-    // left: calc(50% - var(--circle-size) / 2);
-    top: calc(max(30% - var(--circle-size) / 2, 50vh - var(--circle-size)));
-    left: calc(70% - var(--circle-size) / 2);
+  //     width: var(--circle-size);
+  //     height: var(--circle-size);
+  //     // top: calc(50% - var(--circle-size) / 2);
+  //     // top: calc(max(20% - var(--circle-size) / 2, 50vh - var(--circle-size)));
+  //     // left: calc(50% - var(--circle-size) / 2);
+  //     top: calc(max(30% - var(--circle-size) / 2, 50vh - var(--circle-size)));
+  //     left: calc(70% - var(--circle-size) / 2);
 
-    @supports not (-webkit-touch-callout: none) {
-      /* CSS for other than iOS devices */
-      transform-origin: calc(50% - 200px);
-      -webkit-transform-origin: calc(50% - 200px);
-      animation: moveHorizontal 80s ease infinite;
-      -webkit-animation: moveHorizontal 80s ease infinite;
-    }
-    @media screen and (min-width: 768px) {
-      @supports (-webkit-touch-callout: none) {
-        /* CSS specific to iOS devices */
-        transform-origin: calc(50% - 200px);
-        -webkit-transform-origin: calc(50% - 200px);
-        animation: moveHorizontal 80s ease infinite;
-        -webkit-animation: moveHorizontal 80s ease infinite;
-      }
-    }
-  }
+  //     @supports not (-webkit-touch-callout: none) {
+  //       /* CSS for other than iOS devices */
+  //       transform-origin: calc(50% - 200px);
+  //       -webkit-transform-origin: calc(50% - 200px);
+  //       animation: moveHorizontal 80s ease infinite;
+  //       -webkit-animation: moveHorizontal 80s ease infinite;
+  //     }
+  //     @media screen and (min-width: 768px) {
+  //       @supports (-webkit-touch-callout: none) {
+  //         /* CSS specific to iOS devices */
+  //         transform-origin: calc(50% - 200px);
+  //         -webkit-transform-origin: calc(50% - 200px);
+  //         animation: moveHorizontal 80s ease infinite;
+  //         -webkit-animation: moveHorizontal 80s ease infinite;
+  //       }
+  //     }
+  //   }
 
   .g5 {
     position: absolute;
@@ -286,20 +286,20 @@ body {
     }
   }
 
-  .interactive {
-    position: absolute;
-    background: radial-gradient(
-        circle at center,
-        rgba(var(--color-interactive), 0.8) 0,
-        rgba(var(--color-interactive), 0) 50%
-      )
-      no-repeat;
+  //   .interactive {
+  //     position: absolute;
+  //     background: radial-gradient(
+  //         circle at center,
+  //         rgba(var(--color-interactive), 0.8) 0,
+  //         rgba(var(--color-interactive), 0) 50%
+  //       )
+  //       no-repeat;
 
-    mix-blend-mode: var(--blending);
+  //     mix-blend-mode: var(--blending);
 
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-  }
+  //     width: 100%;
+  //     height: 100%;
+  //     top: -50%;
+  //     left: -50%;
+  //   }
 }

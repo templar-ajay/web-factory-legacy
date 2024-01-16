@@ -17,15 +17,8 @@ const SmallBackgroundImage = ({
   context,
 }: SmallBackgroundImageProps): JSX.Element => {
   return (
-    // <section
-    //   data-slice-type={slice.slice_type}
-    //   data-slice-variation={slice.variation}
-    // >
-    //   Placeholder component for small_background_image (variation:{" "}
-    //   {slice.variation}) Slices
-    // </section>
-    <div
-      className="absolute -z-10"
+    <PrismicNextImage
+      className="absolute bg-img -z-10"
       style={{
         top: slice.primary.top + "px",
         right: slice.primary.right + "px",
@@ -33,12 +26,8 @@ const SmallBackgroundImage = ({
         left: slice.primary.left + "px",
         maxWidth: slice.primary.max_width + "px",
       }}
-    >
-      <PrismicNextImage
-        loading="eager"
-        field={slice.primary.small_background_image}
-      />
-    </div>
+      field={slice.primary.small_background_image}
+    />
   );
 };
 

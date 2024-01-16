@@ -96,12 +96,10 @@ const Project = async ({
 
   return (
     <>
-      <div className="h-[100vh] w-[100vw] absolute">
-        <div className="relative w-full h-full">
-          {backgroundOfSmallImages && (
-            <BackgroundOfSmallImages data={backgroundOfSmallImages.data} />
-          )}
-        </div>
+      <div className="h-[100vh] w-[100vw] absolute cccc">
+        {backgroundOfSmallImages && (
+          <BackgroundOfSmallImages data={backgroundOfSmallImages.data} />
+        )}
       </div>
       <Bounded
         data-slice-type={slice.slice_type}
