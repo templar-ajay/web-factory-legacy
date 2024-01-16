@@ -183,7 +183,7 @@ const Project = async ({
                   }}
                 />
               </Reveal>
-              <Reveal>
+              <Reveal width="full">
                 <div
                   className="mt-6 mobile:mt-8 md:mt-12"
                   style={{ color: page_default_text_color || "inherit" }}

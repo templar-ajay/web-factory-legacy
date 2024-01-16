@@ -32,7 +32,7 @@ export const Reveal = ({
       ref={ref}
       style={{
         position: "relative",
-        width,
+        width: width,
         overflow: "visible",
       }}
       {...restProps}
