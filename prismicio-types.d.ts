@@ -885,6 +885,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * Theme Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.theme_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  theme_color: prismic.ColorField;
 }
 
 /**
@@ -982,6 +992,16 @@ export interface ParagraphSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
+
+  /**
+   * Theme Color field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.theme_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  theme_color: prismic.ColorField;
 }
 
 /**

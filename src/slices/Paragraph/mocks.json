@@ -13,6 +13,11 @@
 						}
 					}
 				]
+			},
+			"theme_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#b412b1",
+				"type": "Color"
 			}
 		},
 		"items": []

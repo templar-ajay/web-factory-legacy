@@ -20,6 +20,13 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,image,preformatted"
           }
+        },
+        "theme_color": {
+          "type": "Color",
+          "config": {
+            "label": "Theme Color",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

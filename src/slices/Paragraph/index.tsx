@@ -46,18 +46,28 @@ const Paragraph = ({
   });
 
   return (
-    <Bounded
-      className="max-w-3xl px-10 mx-auto"
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      <Reveal>
-        <PrismicRichText
-          field={slice.primary.content}
-          components={components}
-        />
-      </Reveal>
-    </Bounded>
+    <div className="relative">
+      {slice.primary.theme_color && (
+        <div
+          className="w-full h-full -z-50 absolute top-0"
+          style={{
+            backgroundImage: `linear-gradient(${slice.primary.theme_color}, ${slice.primary.theme_color} 18%, ${slice.primary.theme_color} 58%, rgba(0, 0, 0, 0))`,
+          }}
+        ></div>
+      )}
+      <Bounded
+        className="max-w-3xl px-10 mx-auto"
+        data-slice-type={slice.slice_type}
+        data-slice-variation={slice.variation}
+      >
+        <Reveal width="full">
+          <PrismicRichText
+            field={slice.primary.content}
+            components={components}
+          />
+        </Reveal>
+      </Bounded>
+    </div>
   );
 };
 

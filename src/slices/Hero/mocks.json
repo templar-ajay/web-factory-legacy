@@ -62,6 +62,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "Center",
 				"type": "Select"
+			},
+			"theme_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#297a0e",
+				"type": "Color"
 			}
 		},
 		"items": [

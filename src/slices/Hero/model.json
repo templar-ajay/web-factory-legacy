@@ -78,6 +78,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "theme_color": {
+          "type": "Color",
+          "config": {
+            "label": "Theme Color",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
