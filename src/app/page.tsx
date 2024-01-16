@@ -7,7 +7,7 @@ import { components } from "@/slices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/app/utils";
-import Morphing from "@/components/Morphing/Morphing";
+import Morphing from "@/components/Morphing_2/Morphing";
 
 export default async function Page() {
   const client = createClient();
@@ -44,7 +44,7 @@ export default async function Page() {
         />
         {morphing_effect && (
           <Morphing
-            dissolveColor={homepage.data.background_color || "#000000"}
+            /* dissolveColor={homepage.data.background_color || "#000000"} */
             className="-z-40 absolute h-full w-full"
           ></Morphing>
         )}

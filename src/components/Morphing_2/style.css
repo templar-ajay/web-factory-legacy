@@ -1,0 +1,704 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+._23d {
+  color: #5e5e76;
+  font-size: 50px;
+}
+
+.main-wrapper {
+  overflow: hidden;
+}
+
+.data-div {
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -5.5rem;
+  display: flex;
+  position: relative;
+}
+
+.blending-group-wrapper {
+  display: block;
+  position: static;
+}
+
+.main-shapes-wrapper {
+  z-index: 0;
+  display: block;
+  position: static;
+}
+
+.ultra-gradient-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  position: static;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: visible;
+}
+
+.shape-3 {
+  z-index: 1;
+  width: auto;
+  height: 45rem;
+  opacity: 0.85;
+  filter: blur(100px);
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+  position: absolute;
+  top: auto;
+  right: 10rem;
+  overflow: visible;
+}
+
+.shape-5-2 {
+  width: 30em;
+  height: 30em;
+  background-color: #e7805b;
+  border-radius: 999em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 8.3em;
+  left: 0;
+  right: 0;
+}
+
+.main-shapes-wrapper-2 {
+  opacity: 1;
+  filter: blur(120px);
+}
+
+.ultra-gradient-wrapper-3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 27, 0);
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1vw;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: visible;
+}
+
+.shape-8-2 {
+  width: 47em;
+  height: 50em;
+  background-color: #9fc68e;
+  border-radius: 999em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 9.5em;
+  left: 26.7em;
+  right: 0;
+  transform: rotate(29deg);
+}
+
+.blending-group-wrapper-2 {
+  z-index: 1;
+  opacity: 1;
+  filter: blur(120px);
+  mix-blend-mode: normal;
+}
+
+.shape-2-2 {
+  width: 43em;
+  height: 40em;
+  background-color: #ff0048;
+  border-radius: 999em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 12.1em;
+  left: -27.4em;
+  right: 0;
+}
+
+.shape-7-2 {
+  width: 20em;
+  height: 13em;
+  background-color: #8ab9ff;
+  border-radius: 999em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -9.6em;
+  left: 0;
+  right: -23.9em;
+  transform: rotate(40deg);
+}
+
+.shape-3-2 {
+  width: 61em;
+  height: 76em;
+  background-color: #403e8b;
+  border-radius: 999em;
+  position: absolute;
+  top: 6.4em;
+  left: -26em;
+  right: 0;
+  transform: rotate(-28deg);
+}
+
+.shape-6-2 {
+  width: 66em;
+  height: 36em;
+  background-color: #219fff;
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 12.5em;
+  right: -25em;
+  transform: rotate(60deg);
+}
+
+.shape-4-2 {
+  width: 65em;
+  height: 40em;
+  background-color: #f6c779;
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 14.1em;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.shape-1-2 {
+  width: 40em;
+  height: 40em;
+  background-color: #e0a9a0;
+  border-radius: 999em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -2.8em;
+  left: 0;
+  right: 0;
+}
+
+.shape-2-3 {
+  width: 62em;
+  height: 40em;
+  background-color: #91032b;
+  border-radius: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 12.1em;
+  left: -2.6em;
+  right: 0;
+}
+
+.shape-4-3 {
+  width: 65em;
+  height: 40em;
+  background-color: #bd3c3e;
+  background-image: linear-gradient(#ca3a3c, #9e7255);
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 14.1em;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.shape-5-3 {
+  width: 47em;
+  height: 30em;
+  background-color: rgba(88, 41, 175, 0.74);
+  border-radius: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -2.1em;
+  left: 0;
+  right: 0;
+}
+
+.shape-3-3 {
+  z-index: 1;
+  width: 61em;
+  height: 91em;
+  background-color: #282770;
+  border-radius: 999em;
+  position: absolute;
+  top: -5em;
+  left: -26em;
+  right: 0;
+  transform: rotate(-28deg);
+}
+
+.shape-6-3 {
+  width: 83em;
+  height: 36em;
+  background-color: rgba(14, 37, 114, 0);
+  background-image: linear-gradient(#0f122b, #383f8a);
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 12.5em;
+  right: -26.5em;
+  transform: rotate(60deg);
+}
+
+.shape-6-4 {
+  width: 83em;
+  height: 36em;
+  background-color: rgba(14, 37, 114, 0);
+  background-image: linear-gradient(#0f122b, #383f8a);
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 12.5em;
+  right: -26.5em;
+  transform: rotate(60deg);
+}
+
+.shape-4-4 {
+  width: 65em;
+  height: 40em;
+  background-color: #bd3c3e;
+  background-image: linear-gradient(#ca3a3c, #9e7255);
+  border-radius: 999em;
+  margin-left: auto;
+  position: absolute;
+  top: 14.1em;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+@media screen and (min-width: 1280px) {
+  .body-5 {
+    font-family: Plusjakartadisplay, sans-serif;
+  }
+
+  .main-shapes-wrapper {
+    mix-blend-mode: normal;
+    display: block;
+  }
+
+  .shape-3 {
+    width: auto;
+    height: 35rem;
+    top: auto;
+    left: auto;
+    right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shape-3 {
+    width: auto;
+    height: 38rem;
+    filter: blur(100px);
+    top: auto;
+    left: auto;
+    right: 10rem;
+  }
+
+  .shape-6-3 {
+    background-image: linear-gradient(#0f185a, #35417a);
+  }
+
+  .shape-6-4 {
+    background-image: linear-gradient(#0f185a, #35417a);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .blending-group-wrapper {
+    width: 100%;
+  }
+
+  .ultra-gradient-wrapper {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .shape-3 {
+    z-index: 3;
+    width: auto;
+    height: 49rem;
+    filter: blur(200px);
+    display: block;
+    top: auto;
+    left: auto;
+    right: 15rem;
+  }
+
+  .shape-4-3 {
+    z-index: 2;
+    opacity: 1;
+    background-image: linear-gradient(212deg, #ca3a3c, #a88573);
+  }
+
+  .shape-6-3,
+  .shape-6-4 {
+    background-image: linear-gradient(#261941, #2a4499);
+  }
+
+  .shape-4-4 {
+    z-index: 2;
+    opacity: 1;
+    background-image: linear-gradient(212deg, #ca3a3c, #a88573);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ultra-gradient-wrapper {
+    position: relative;
+  }
+
+  .shape-3 {
+    width: auto;
+    height: 25rem;
+    filter: blur(150px);
+    top: 6rem;
+    left: auto;
+    right: 2rem;
+  }
+
+  .ultra-gradient-wrapper-3 {
+    font-size: 1.3vh;
+  }
+
+  .blending-group-wrapper-2 {
+    margin-left: -4em;
+  }
+
+  .shape-3-2 {
+    width: 44em;
+    height: 57em;
+    position: absolute;
+    top: 23.2em;
+    bottom: 0;
+    left: auto;
+    right: -9.5em;
+  }
+
+  .shape-4-2 {
+    top: 22em;
+  }
+
+  .shape-4-3 {
+    top: 22em;
+  }
+
+  .shape-3-3 {
+    width: 44em;
+    height: 57em;
+    position: absolute;
+    top: 23.2em;
+    bottom: 0;
+    left: auto;
+    right: -9.5em;
+  }
+
+  .shape-4-4 {
+    top: 22em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ultra-gradient-wrapper {
+    position: relative;
+  }
+
+  .shape-3 {
+    width: 25rem;
+    height: 30rem;
+    max-width: none;
+    filter: blur(100px);
+    top: 10rem;
+    left: auto;
+    right: -5rem;
+  }
+
+  .main-shapes-wrapper-2,
+  .blending-group-wrapper-2 {
+    filter: blur(80px);
+  }
+
+  .shape-3-2 {
+    width: 30em;
+    height: 100em;
+  }
+
+  .shape-3-3 {
+    width: 30em;
+    height: 100em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  ._23d {
+    font-size: 40px;
+  }
+
+  .data-div {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .blending-group-wrapper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .main-shapes-wrapper {
+    width: 100%;
+    display: block;
+    overflow: visible;
+  }
+
+  .ultra-gradient-wrapper {
+    position: relative;
+    overflow: visible;
+  }
+
+  .shape-3 {
+    width: 25rem;
+    height: 30rem;
+    max-width: none;
+    filter: blur(100px);
+    display: block;
+    right: -10rem;
+    overflow: visible;
+  }
+
+  .main-shapes-wrapper-2,
+  .blending-group-wrapper-2 {
+    position: relative;
+  }
+
+  .shape-4-2 {
+    top: 30.7em;
+  }
+
+  .shape-2-3 {
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: auto;
+  }
+
+  .shape-4-3 {
+    width: 50em;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+  }
+
+  .shape-5-3 {
+    top: auto;
+    bottom: 0%;
+    left: auto;
+    right: 0%;
+  }
+
+  .shape-3-3 {
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: auto;
+  }
+
+  .shape-6-3 {
+    width: 74em;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .shape-6-4 {
+    width: 74em;
+    right: -40.1em;
+  }
+
+  .shape-4-4 {
+    width: 50em;
+    top: 15.2em;
+  }
+}
+
+.shape-3-2 {
+  transform: rotateZ(-180deg); /* Rotate around the Z-axis by -180 degrees */
+  transition: transform 0.5s; /* Add a smooth transition effect with a duration of 0.5 seconds */
+}
+
+/* Rotate the element by -180deg */
+.shape-3-2.rotate-180 {
+  transform: rotateZ(-180deg);
+  transition: transform 500ms;
+}
+
+/* Move the element to x: 0vw, y: 0px */
+.shape-3-2.move-0 {
+  transform: translate3d(0vw, 0px, 0px);
+  transition: transform 500ms;
+}
+
+/* Rotate the element to z: 0deg over 10000ms */
+.shape-3-2.rotate-0 {
+  transform: rotateZ(0deg);
+  transition: transform 10000ms;
+}
+
+/* Move the element to x: 24vw, y: 0px */
+.shape-3-2.move-24 {
+  transform: translate3d(24vw, 0px, 0px);
+  transition: transform 10000ms;
+}
+
+/* Rotate the element to z: 180deg over 10000ms */
+.shape-3-2.rotate-180-2 {
+  transform: rotateZ(180deg);
+  transition: transform 10000ms;
+}
+
+/* Move the element to x: 0vw, y: 0px */
+.shape-3-2.move-0-2 {
+  transform: translate3d(0vw, 0px, 0px);
+  transition: transform 10000ms;
+}
+
+/* Rotate the element by -180deg immediately */
+.shape-3-2.rotate-180-3 {
+  transform: rotateZ(-180deg);
+}
+
+/* Move the element to x: 0vw, y: 0px immediately */
+.shape-3-2.move-0-3 {
+  transform: translate3d(0vw, 0px, 0px);
+  transition: transform 500ms;
+}
+
+.shape-3-3 {
+  /* Set initial position and rotation if needed */
+  transform: translate(0, 0) rotate(0deg);
+  position: relative;
+  /* Add any other necessary styles */
+}
+
+/* Combined Animation */
+@keyframes combinedAnimation {
+  0% {
+    transform: rotate(0deg) translate(0vw, 0px);
+  }
+
+  25% {
+    transform: rotate(-180deg) translate(0vw, 0px);
+  }
+
+  50% {
+    transform: rotate(-180deg) translate(0vw, -500px);
+  }
+
+  75% {
+    transform: rotate(154deg) translate(-8vw, -500px);
+  }
+
+  100% {
+    transform: rotate(-180deg) translate(0vw, 0px);
+  }
+}
+
+/* Apply the combined animation based on the provided data */
+.shape-3-3 {
+  animation: combinedAnimation 100s ease-in-out infinite;
+}
+
+.shape-4-3 {
+  /* Set initial position and rotation if needed */
+  transform: translate(0px, 0px) rotate(0deg);
+  position: relative;
+  /* Add any other necessary styles */
+}
+
+/* Combined Animation */
+@keyframes combinedAnimationShape43 {
+  0%,
+  12.5%,
+  25%,
+  37.5%,
+  62.5%,
+  75%,
+  87.5%,
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+
+  50%,
+  62.5%,
+  75%,
+  87.5% {
+    transform: rotate(-41deg) translate(500px, 105px);
+  }
+
+  75%,
+  87.5% {
+    transform: rotate(3deg) translate(500px, 105px);
+  }
+}
+
+/* Apply the combined animation based on the provided data */
+.shape-4-3 {
+  animation: combinedAnimationShape43 100s ease-in-out infinite;
+}
+
+.shape-5-3 {
+  /* Set initial position and rotation if needed */
+  transform: translate(0px, 0px) rotate(0deg);
+  position: relative;
+  /* Add any other necessary styles */
+}
+
+/* Combined Animation */
+@keyframes combinedAnimationShape53 {
+  0%,
+  12.5%,
+  25%,
+  37.5%,
+  62.5%,
+  75%,
+  87.5%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+  50%,
+  62.5%,
+  75%,
+  87.5% {
+    transform: translate(153px, 371px);
+  }
+
+  75%,
+  87.5% {
+    transform: translate(258px, 242px);
+  }
+}
+
+/* Apply the combined animation based on the provided data */
+.shape-5-3 {
+  animation: combinedAnimationShape53 100s ease-in-out infinite;
+  animation-duration: 100s; /* Default duration for the combined animation */
+}
