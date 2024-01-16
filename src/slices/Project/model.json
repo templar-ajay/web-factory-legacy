@@ -37,6 +37,13 @@
             "placeholder": ""
           }
         },
+        "theme_color": {
+          "type": "Color",
+          "config": {
+            "label": "Theme Color",
+            "placeholder": ""
+          }
+        },
         "laptop_size_project_screenshot": {
           "type": "Image",
           "config": {

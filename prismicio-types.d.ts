@@ -1094,6 +1094,16 @@ export interface ProjectSliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * Theme Color field in *Project → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.primary.theme_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  theme_color: prismic.ColorField;
+
+  /**
    * Laptop Size Project Screenshot field in *Project → Primary*
    *
    * - **Field Type**: Image
