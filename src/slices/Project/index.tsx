@@ -139,16 +139,20 @@ const Project = async ({
           </div>
           <div className="w-full lg:w-[60%]">
             <div className="lg:w-[80%] flex justify-end relative">
-              <Reveal>
+              <Reveal delay="0.5">
                 <PrismicNextImage
                   className="z-10 lg:translate-x-[120px] rounded-2xl"
                   field={slice.primary.laptop_size_project_screenshot}
                 />
               </Reveal>
-              <PrismicNextImage
-                className="absolute lg:scale-80 max-w-[10rem] sm:max-w-[15rem] lg:max-w-[20rem]  z-20 left-0 -bottom-48 mobile:-bottom-20 rounded-2xl"
-                field={slice.primary.mobile_size_project_screenshot}
-              />
+              <div className="absolute lg:scale-80 max-w-[10rem] sm:max-w-[15rem] lg:max-w-[20rem]  z-20 left-0 -bottom-48 mobile:-bottom-20">
+                <Reveal delay="1">
+                  <PrismicNextImage
+                    className="w-full h-full rounded-2xl"
+                    field={slice.primary.mobile_size_project_screenshot}
+                  />
+                </Reveal>
+              </div>
             </div>
           </div>
         </div>

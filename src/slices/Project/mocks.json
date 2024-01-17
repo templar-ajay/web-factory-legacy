@@ -26,7 +26,6 @@
 				]
 			},
 			"laptop_size_project_screenshot": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
@@ -44,29 +43,30 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"mobile_size_project_screenshot": {
+				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
-					"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
-					"width": 4160,
-					"height": 3120
+					"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+					"width": 3810,
+					"height": 5715
 				},
-				"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
-				"width": 4160,
-				"height": 3120,
+				"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?rect=457%2C0%2C2896%2C5715&w=226&h=446",
+				"width": 226,
+				"height": 446,
 				"edit": {
 					"zoom": 1,
 					"crop": {
-						"x": 0,
+						"x": 457,
 						"y": 0
 					},
 					"background": "transparent"
 				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"cta_text": {
