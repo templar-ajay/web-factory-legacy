@@ -59,7 +59,10 @@
           "type": "Image",
           "config": {
             "label": "Mobile Size Project Screenshot",
-            "constraint": {},
+            "constraint": {
+              "width": 226,
+              "height": 446
+            },
             "thumbnails": []
           }
         },
