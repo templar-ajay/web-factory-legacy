@@ -42,7 +42,7 @@ export default async function Header({ uid }: HeaderParams) {
                 style={{
                   objectFit: "contain",
                 }}
-                className=" w-[120px] h-[50px] sm:h-[55px] xs:w-[150px] sm:w-full"
+                className=" w-[120px] h-[40px] mobile:h-[50px] sm:h-[55px] xs:w-[150px] sm:w-full"
               />
             </Link>
           </div>
@@ -53,7 +53,7 @@ export default async function Header({ uid }: HeaderParams) {
               color: navigation_items_color || secondary_color || "#fff",
             }}
           >
-            <div className="flex items-start">
+            {/* <div className="flex items-start">
               {slices[0] && (
                 <Navigation
                   context={{ orientation: "desktop" }}
@@ -79,18 +79,37 @@ export default async function Header({ uid }: HeaderParams) {
                   </div>
                 </div>
               </PrismicNextLink>
-            </div>
+            </div> */}
           </div>
           {/* mobile */}
-          <div className="block md:hidden cursor-pointer pointer-events-auto">
-            <MobileNavigation
-              slices={slices}
-              cta_message={cta_message}
-              cta_link={cta_link}
-              header_background_color={header_background_color}
-              navigation_items_color={navigation_items_color}
-              hamburger_icon_color={hamburger_icon_color}
-            />
+          <div className="block cursor-pointer pointer-events-auto">
+            <div className="flex items-center">
+              <PrismicNextLink field={cta_link}>
+                <div className="mt-1 block arrow-box text-lg mr-2 mobile:mr-4">
+                  <div
+                    style={{
+                      color:
+                        navigation_items_color || secondary_color || "#fff",
+                    }}
+                    className="arrow-button block text-sm xs:text-md sm:text-lg border-solid border-[1px] rounded-full px-4 mobile:px-8 py-2"
+                  >
+                    {cta_message}
+                    <FontAwesomeIcon
+                      className="arrow-icon mb-0 mt-0 ml-2 w-3 hidden mobile:inline-block"
+                      icon={faArrowRight}
+                    />
+                  </div>
+                </div>
+              </PrismicNextLink>
+              <MobileNavigation
+                slices={slices}
+                cta_message={cta_message}
+                cta_link={cta_link}
+                header_background_color={header_background_color}
+                navigation_items_color={navigation_items_color}
+                hamburger_icon_color={hamburger_icon_color}
+              />
+            </div>
           </div>
         </div>
       </header>

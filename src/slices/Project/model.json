@@ -48,7 +48,10 @@
           "type": "Image",
           "config": {
             "label": "Laptop Size Project Screenshot",
-            "constraint": {},
+            "constraint": {
+              "width": 745,
+              "height": 654
+            },
             "thumbnails": []
           }
         },

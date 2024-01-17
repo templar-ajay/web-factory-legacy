@@ -24,7 +24,8 @@ const Navigation = ({
         <div className="flex">
           {slice.items.map(({ name, link }) => (
             <PrismicNextLink
-              className="navigation-item text-xl block"
+              // old="text-xl"
+              className="navigation-item text-6xl block"
               style={{
                 paddingRight: "50px",
                 color: navigation_items_color || "inherit",
@@ -41,7 +42,8 @@ const Navigation = ({
         <div>
           {slice.items.map(({ name, link }) => (
             <PrismicNextLink
-              className="navigation-item text-2xl block text-center py-8"
+              // old="text-2xl"
+              className="navigation-item text-5xl block text-center py-8"
               field={link}
               style={{ color: navigation_items_color }}
             >
