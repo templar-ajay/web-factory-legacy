@@ -221,8 +221,6 @@ const Morphing = ({ className }: { className: string }) => {
             className="shape-3-3"
           />
           <div className="shape-2-3" />
-        </div>
-        <div className="blending-group-wrapper-2">
           <div
             ref={elementRef3}
             style={{
@@ -231,7 +229,7 @@ const Morphing = ({ className }: { className: string }) => {
               transformStyle: "preserve-3d",
               willChange: "transform",
             }}
-            className="shape-4-3"
+            className="shape-4-3 -mt-[60%]"
           />
           <div
             ref={elementRef1}
@@ -241,10 +239,35 @@ const Morphing = ({ className }: { className: string }) => {
               transformStyle: "preserve-3d",
               willChange: "transform",
             }}
-            className="shape-5-3"
+            className="shape-5-3 -mt-[5%]"
           />
-          <div className="shape-6-3" />
+
+          <div className="shape-6-3 -mt-64 -mr-64" />
         </div>
+
+        {/* <div className="blending-group-wrapper-2"> */}
+        {/* <div
+          ref={elementRef3}
+          style={{
+            transform:
+              "translate3d(290.295px, 60.962px, -4.64472px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1.74177deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+            willChange: "transform",
+          }}
+          className="shape-4-3"
+        />
+        <div
+          ref={elementRef1}
+          style={{
+            transform:
+              "translate3d(149.792px, 140.503px, 121.924px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+            willChange: "transform",
+          }}
+          className="shape-5-3 "
+        /> */}
+        {/* <div className="shape-6-3" /> */}
+        {/* </div> */}
       </div>
     </>
   );

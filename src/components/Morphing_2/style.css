@@ -702,7 +702,8 @@
 }
 
 /* Apply the combined animation based on the provided data */
-.shape-5-3 {
+.shape-5-3,
+.shape-6-3 {
   animation: combinedAnimationShape53 60s ease-in-out infinite;
   animation-duration: 60s; /* Default duration for the combined animation */
 }
