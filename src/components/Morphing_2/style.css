@@ -604,26 +604,29 @@
     transform: rotate(0deg) translate(0vw, 0px);
   }
 
-  25% {
+  20% {
     transform: rotate(-180deg) translate(0vw, 0px);
   }
 
-  50% {
+  40% {
     transform: rotate(-180deg) translate(0vw, -500px);
   }
 
-  75% {
+  60% {
     transform: rotate(154deg) translate(-8vw, -500px);
   }
 
-  100% {
+  80% {
     transform: rotate(-180deg) translate(0vw, 0px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0vw, 0px);
   }
 }
 
 /* Apply the combined animation based on the provided data */
 .shape-3-3 {
-  animation: combinedAnimation 100s ease-in-out infinite;
+  animation: combinedAnimation 60s ease-in-out infinite;
 }
 
 .shape-4-3 {
@@ -636,20 +639,20 @@
 /* Combined Animation */
 @keyframes combinedAnimationShape43 {
   0%,
-  12.5%,
+  /* 12.5%, */
   25%,
-  37.5%,
+  /* 37.5%, */
   62.5%,
-  75%,
-  87.5%,
+  /* 75%, */
+  /* 87.5%, */
   100% {
     transform: rotate(0deg) translate(0px, 0px);
   }
 
   50%,
-  62.5%,
-  75%,
-  87.5% {
+  62.5% {
+    /* 75%, */
+    /* 87.5%  */
     transform: rotate(-41deg) translate(500px, 105px);
   }
 
@@ -661,7 +664,7 @@
 
 /* Apply the combined animation based on the provided data */
 .shape-4-3 {
-  animation: combinedAnimationShape43 100s ease-in-out infinite;
+  animation: combinedAnimationShape43 60s ease-in-out infinite;
 }
 
 .shape-5-3 {
@@ -674,20 +677,21 @@
 /* Combined Animation */
 @keyframes combinedAnimationShape53 {
   0%,
-  12.5%,
-  25%,
+  /* 12.5%, */
+  /* 25%, */
   37.5%,
   62.5%,
-  75%,
-  87.5%,
+  /* 75%, */
+  83.5%,
   100% {
     transform: translate(0px, 0px);
   }
 
+  25%,
   50%,
   62.5%,
-  75%,
-  87.5% {
+  /* 75%, */
+  93% {
     transform: translate(153px, 371px);
   }
 
@@ -699,6 +703,6 @@
 
 /* Apply the combined animation based on the provided data */
 .shape-5-3 {
-  animation: combinedAnimationShape53 100s ease-in-out infinite;
-  animation-duration: 100s; /* Default duration for the combined animation */
+  animation: combinedAnimationShape53 60s ease-in-out infinite;
+  animation-duration: 60s; /* Default duration for the combined animation */
 }
