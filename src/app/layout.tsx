@@ -3,7 +3,7 @@ import type { Metadata, ResolvingMetadata, Viewport } from "next";
 import "./globals.css";
 import clsx from "clsx";
 
-import { Questrial, Roboto, Montserrat } from "next/font/google";
+import { Questrial, Roboto, Montserrat, Anton } from "next/font/google";
 
 import { repositoryName } from "@/prismicio";
 import { PrismicPreview } from "@prismicio/next";
@@ -17,6 +17,13 @@ const body = Questrial({
   weight: "400",
   display: "swap",
   variable: "--font-body",
+});
+
+const hero = Anton({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-anton",
 });
 
 const display = Roboto({
@@ -77,6 +84,7 @@ export default async function RootLayout({
           body.variable,
           display.variable,
           montserrat.variable,
+          hero.variable,
           "overflow-x-hidden"
         )}
       >

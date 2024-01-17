@@ -25,7 +25,7 @@ const getComponents: componentsType = ({
         <Heading
           as="h2"
           size="lg"
-          className="font-normal tracking-tight leading-tight text-2xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
+          className="font-normal font-hero tracking-tight !leading-snug text-2xl mobile:text-3xl md:text-5xl 2xl:text-6xl text-center mb-4"
           color={text_color}
         >
           {children}
@@ -109,6 +109,7 @@ const Hero = ({
       <Bounded
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
+        className="max-w-2xl mx-auto"
       >
         <div className="max-w-[700px] mt-[80px] md:mt-0 mx-auto animate-fade-in duration-500">
           <PrismicRichText

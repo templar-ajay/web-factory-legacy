@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getHeader, getSettings } from "@/app/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Navigation from "@/slices/Navigation";
 import MobileNavigation from "./MobileNavigation";
 
 type HeaderParams = {

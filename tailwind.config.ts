@@ -16,6 +16,7 @@ const config: Config = {
         body: ["var(--font-body)"],
         display: ["var(--font-display)"],
         montserrat: ["var(--font-montserrat)"],
+        hero: ["var(--font-anton)"],
       },
       screens: {
         xs: "375px",
