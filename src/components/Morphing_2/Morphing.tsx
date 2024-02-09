@@ -245,7 +245,7 @@ const Morphing = ({ className }: { className: string }) => {
           <div className="shape-6-3 -mt-64 -mr-64" />
         </div>
 
-        <div className="blending-group-wrapper-2">
+        {/* <div className="blending-group-wrapper-2">
           <div
             ref={elementRef3}
             style={{
@@ -267,7 +267,7 @@ const Morphing = ({ className }: { className: string }) => {
             className="shape-5-3 "
           />
           <div className="shape-6-3" />
-        </div>
+        </div> */}
       </div>
     </>
   );
