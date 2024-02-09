@@ -6,6 +6,7 @@ import { components } from "@/slices";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/app/utils";
+import Morphing from "@/components/Morphing_2/Morphing";
 
 type Params = { uid: string };
 
@@ -18,7 +19,7 @@ export default async function Page({ params }: { params: Params }) {
   const settings = await getSettings();
 
   const { default_header, default_footer } = settings.data;
-  const { header, footer } = page?.data;
+  const { header, footer, background_noise, morphing_effect } = page?.data;
 
   const headerUID =
     //@ts-ignore
@@ -35,9 +36,40 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <>
-      <Header uid={headerUID} />
-      <SliceZone slices={page.data.slices} components={components} />
-      <Footer uid={footerUID} />
+      <div className="relative">
+        <div
+          className="absolute w-full h-full -z-50"
+          style={{
+            color: page.data.page_default_text_color || "",
+            background: page.data.background_color || "",
+          }}
+        />
+        {morphing_effect && (
+          <Morphing
+            /* dissolveColor={page.data.background_color || "#000000"} */
+            className="-z-40 absolute h-full w-full"
+          ></Morphing>
+        )}
+
+        {background_noise && (
+          <div
+            className="absolute h-full w-full -z-30"
+            style={{
+              background: "url(/Noise&Texture.webp)",
+            }}
+          />
+        )}
+
+        <Header uid={headerUID} />
+        <SliceZone
+          slices={page.data.slices}
+          components={components}
+          context={{
+            page_default_text_color: page.data.page_default_text_color,
+          }}
+        />
+        <Footer uid={footerUID} />
+      </div>
     </>
   );
 }
