@@ -42,7 +42,7 @@ const actionItems = [
     config: {
       delay: 0,
       easing: "",
-      duration: 10000,
+      duration: 50000,
       target: {
         useEventTarget: "CHILDREN",
         selector: ".shape-3-2",
@@ -60,7 +60,7 @@ const actionItems = [
     config: {
       delay: 0,
       easing: "",
-      duration: 10000,
+      duration: 6000,
       target: {
         useEventTarget: "CHILDREN",
         selector: ".shape-3-2",
@@ -78,7 +78,7 @@ const actionItems = [
     config: {
       delay: 0,
       easing: "",
-      duration: 10000,
+      duration: 5000,
       target: {
         useEventTarget: "CHILDREN",
         selector: ".shape-3-2",
@@ -245,29 +245,29 @@ const Morphing = ({ className }: { className: string }) => {
           <div className="shape-6-3 -mt-64 -mr-64" />
         </div>
 
-        {/* <div className="blending-group-wrapper-2"> */}
-        {/* <div
-          ref={elementRef3}
-          style={{
-            transform:
-              "translate3d(290.295px, 60.962px, -4.64472px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1.74177deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
-            willChange: "transform",
-          }}
-          className="shape-4-3"
-        />
-        <div
-          ref={elementRef1}
-          style={{
-            transform:
-              "translate3d(149.792px, 140.503px, 121.924px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
-            willChange: "transform",
-          }}
-          className="shape-5-3 "
-        /> */}
-        {/* <div className="shape-6-3" /> */}
-        {/* </div> */}
+        <div className="blending-group-wrapper-2">
+          <div
+            ref={elementRef3}
+            style={{
+              transform:
+                "translate3d(290.295px, 60.962px, -4.64472px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1.74177deg) skew(0deg, 0deg)",
+              transformStyle: "preserve-3d",
+              willChange: "transform",
+            }}
+            className="shape-4-3"
+          />
+          <div
+            ref={elementRef1}
+            style={{
+              transform:
+                "translate3d(149.792px, 140.503px, 121.924px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+              transformStyle: "preserve-3d",
+              willChange: "transform",
+            }}
+            className="shape-5-3 "
+          />
+          <div className="shape-6-3" />
+        </div>
       </div>
     </>
   );
