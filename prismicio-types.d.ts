@@ -224,6 +224,7 @@ export type IframeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | TechListSlice
   | IFrameSlice
   | CallToActionSlice
   | CardsSlice
@@ -1058,6 +1059,16 @@ export type NavigationSlice = prismic.SharedSlice<
  * Primary content in *Paragraph → Primary*
  */
 export interface ParagraphSliceDefaultPrimary {
+  /**
+   * Title field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
   /**
    * Content field in *Paragraph → Primary*
    *

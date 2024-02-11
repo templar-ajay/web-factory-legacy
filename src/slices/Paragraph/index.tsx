@@ -1,4 +1,5 @@
 import Bounded from "@/components/Bounded";
+import Heading from "@/components/Heading";
 import Para from "@/components/Paragraph";
 import { Reveal } from "@/components/Reveal";
 import { Content } from "@prismicio/client";
@@ -16,7 +17,7 @@ const getComponents: componentsType = ({
   return {
     paragraph: ({ children }: any) => (
       <Para
-        className=" font-montserrat text-center font-light text-xl mobile:text-2xl md:text-3xl !leading-relaxed text-black-500 mt-8 mb-10"
+        className=" font-montserrat font-light text-xl mobile:text-2xl md:text-3xl !leading-relaxed text-black-500 mt-8 mb-10"
         color={paragraph_color}
       >
         {children}
@@ -56,11 +57,18 @@ const Paragraph = ({
         ></div>
       )}
       <Bounded
-        className="max-w-3xl px-10 mx-auto"
+        className="max-w-3xl px-5 md:px-10"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        <Reveal width="full">
+        {slice.primary.title?.length && (
+          <Reveal width="100%">
+            <Heading as="h2" size="lg" className="w-fit py-2 mb-4" color="#fff">
+              {slice.primary.title}
+            </Heading>
+          </Reveal>
+        )}
+        <Reveal width="full" delay={0.3}>
           <PrismicRichText
             field={slice.primary.content}
             components={components}

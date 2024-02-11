@@ -74,6 +74,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "tech_list": {
+              "type": "SharedSlice"
+            },
             "i_frame": {
               "type": "SharedSlice"
             },

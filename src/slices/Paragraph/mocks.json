@@ -18,6 +18,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "#b412b1",
 				"type": "Color"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "brick",
+				"type": "Text"
 			}
 		},
 		"items": []

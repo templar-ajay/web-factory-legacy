@@ -83,7 +83,7 @@ const Cards = async ({
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Reveal width="!00%" delay={0.1}>
+      <Reveal width="100%" delay={0.1}>
         <div
           className="mx-auto w-fit rounded-full py-2 px-5 text-lg mb-4"
           style={{
