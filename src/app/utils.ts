@@ -6,9 +6,9 @@ export const getSettings = async ({ lang }: { lang: string }) => {
   return settings;
 };
 
-export const getHeader = async (uid: string) => {
+export const getHeader = async (uid: string, lang: string) => {
   const client = createClient();
-  const header = await client.getByUID("header", uid);
+  const header = await client.getByUID("header", uid, { lang: lang });
   return header;
 };
 

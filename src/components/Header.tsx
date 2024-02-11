@@ -11,7 +11,7 @@ type HeaderParams = {
 };
 
 export default async function Header({ uid, lang }: HeaderParams) {
-  const header = await getHeader(uid);
+  const header = await getHeader(uid, lang);
   const settings = await getSettings({ lang: lang });
 
   const { secondary_color } = settings.data;

@@ -50,7 +50,7 @@ const MobileNavigation = ({
         <div
           className={clsx(
             isLeaving && "slide-right",
-            "slide-left navigation fixed backdrop-blur-[5px] w-full h-full top-[0] left-0 duration-300 ease-in-out"
+            "slide-left navigation fixed backdrop-blur-[20px] w-full h-full top-[0] left-0 duration-300 ease-in-out"
           )}
         >
           <div className="flex flex-col w-full h-full justify-center gap-4 items-center">
