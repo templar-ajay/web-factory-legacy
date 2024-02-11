@@ -109,6 +109,11 @@ const Project = async ({
           ></div>
         )}
       </div>
+      <div className="w-full flex justify-center">
+        <Heading as="h2" size="lg" className="font-bold" color="#fff">
+          {slice.primary.super_title}
+        </Heading>
+      </div>
       <Bounded
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}

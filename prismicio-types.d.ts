@@ -1159,6 +1159,16 @@ export type PartnersSlice = prismic.SharedSlice<
  */
 export interface ProjectSliceDefaultPrimary {
   /**
+   * Super Title field in *Project → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.primary.super_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  super_title: prismic.KeyTextField;
+
+  /**
    * Title field in *Project → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1504,6 +1514,66 @@ export type SmallCardsSlice = prismic.SharedSlice<
   SmallCardsSliceVariation
 >;
 
+/**
+ * Primary content in *TechList → Primary*
+ */
+export interface TechListSliceDefaultPrimary {
+  /**
+   * Title field in *TechList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_list.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *TechList → Items*
+ */
+export interface TechListSliceDefaultItem {
+  /**
+   * Tech Name field in *TechList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_list.items[].tech_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tech_name: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for TechList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TechListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TechListSliceDefaultPrimary>,
+  Simplify<TechListSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *TechList*
+ */
+type TechListSliceVariation = TechListSliceDefault;
+
+/**
+ * TechList Shared Slice
+ *
+ * - **API ID**: `tech_list`
+ * - **Description**: TechList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TechListSlice = prismic.SharedSlice<
+  "tech_list",
+  TechListSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1572,6 +1642,11 @@ declare module "@prismicio/client" {
       SmallCardsSliceDefaultItem,
       SmallCardsSliceVariation,
       SmallCardsSliceDefault,
+      TechListSlice,
+      TechListSliceDefaultPrimary,
+      TechListSliceDefaultItem,
+      TechListSliceVariation,
+      TechListSliceDefault,
     };
   }
 }

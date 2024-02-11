@@ -49,7 +49,6 @@
 				"thumbnails": {}
 			},
 			"mobile_size_project_screenshot": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
@@ -67,6 +66,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"cta_text": {
@@ -129,6 +131,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "#97883a",
 				"type": "Color"
+			},
+			"super_title": {
+				"__TYPE__": "FieldContent",
+				"value": "house",
+				"type": "Text"
 			}
 		},
 		"items": []
