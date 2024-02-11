@@ -58,6 +58,15 @@
           "placeholder": ""
         }
       },
+      "default_cta_style": {
+        "type": "Select",
+        "config": {
+          "label": "Default CTA Style",
+          "placeholder": "",
+          "options": ["Filled", "Bordered"],
+          "default_value": "Filled"
+        }
+      },
       "meta_title": {
         "type": "Text",
         "config": {

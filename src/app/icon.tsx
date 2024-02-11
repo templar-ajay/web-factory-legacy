@@ -13,7 +13,7 @@ export const contentType = "image/png";
 
 // Image generation
 export default async function Icon() {
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
   const { favicon } = settings.data;
   return new ImageResponse(
     (

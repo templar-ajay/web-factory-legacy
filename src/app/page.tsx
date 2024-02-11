@@ -12,12 +12,13 @@ import Morphing from "@/components/Morphing_2/Morphing";
 export default async function Page() {
   const client = createClient();
 
-  const homepage = await client.getByUID("page", "homepage");
+  const homepage = await client.getByUID("page", "homepage", { lang: "es-es" });
 
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
 
   const { default_header, default_footer } = settings.data;
   const { header, footer, background_noise, morphing_effect } = homepage?.data;
+  const { lang, alternate_languages } = homepage;
 
   const headerUID =
     //@ts-ignore
@@ -25,6 +26,7 @@ export default async function Page() {
     //@ts-ignore
     default_header?.uid ||
     "default-header-not-found-in-settings";
+
   const footerUID =
     //@ts-ignore
     footer?.uid ||
@@ -34,7 +36,7 @@ export default async function Page() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <div
           className="absolute w-full h-full -z-50"
           style={{
@@ -58,15 +60,21 @@ export default async function Page() {
           />
         )}
 
-        <Header uid={headerUID} />
+        <Header uid={headerUID} lang={lang} />
         <SliceZone
           slices={homepage.data.slices}
           components={components}
           context={{
             page_default_text_color: homepage.data.page_default_text_color,
+            lang: lang,
+            alternate_languages: alternate_languages,
           }}
         />
-        <Footer uid={footerUID} />
+        <Footer
+          uid={footerUID}
+          lang={lang}
+          alternate_languages={alternate_languages}
+        />
       </div>
     </>
   );
@@ -76,7 +84,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
 
   const page = await client
-    .getByUID("page", "homepage")
+    .getByUID("page", "homepage", { lang: "es-es" })
     .catch(() => notFound());
 
   return {

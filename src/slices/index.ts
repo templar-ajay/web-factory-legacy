@@ -6,6 +6,7 @@ export const components = {
   call_to_action: dynamic(() => import("./CallToAction")),
   cards: dynamic(() => import("./Cards")),
   hero: dynamic(() => import("./Hero")),
+  i_frame: dynamic(() => import("./IFrame")),
   navigation: dynamic(() => import("./Navigation")),
   paragraph: dynamic(() => import("./Paragraph")),
   partners: dynamic(() => import("./Partners")),

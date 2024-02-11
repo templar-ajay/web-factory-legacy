@@ -13,10 +13,10 @@ type Params = { uid: string };
 export default async function Page({ params }: { params: Params }) {
   const client = createClient();
   const page = await client
-    .getByUID("page", params.uid, { lang: "es-es" })
+    .getByUID("page", params.uid, { lang: "en-us" })
     .catch(() => notFound());
 
-  const settings = await getSettings({ lang: "es-es" });
+  const settings = await getSettings({ lang: "en-us" });
 
   const { default_header, default_footer } = settings.data;
   const { header, footer, background_noise, morphing_effect } = page?.data;
@@ -88,7 +88,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const client = createClient();
   const page = await client
-    .getByUID("page", params.uid, { lang: "es-es" })
+    .getByUID("page", params.uid, { lang: "en-us" })
     .catch(() => notFound());
 
   const { meta_title, meta_description, meta_image } = page.data;
@@ -104,7 +104,7 @@ export async function generateMetadata({
 
 export async function generateStaticParams() {
   const client = createClient();
-  const pages = await client.getAllByType("page", { lang: "es-es" });
+  const pages = await client.getAllByType("page", { lang: "en-us" });
 
   return pages.map((page) => {
     return { uid: page.uid };

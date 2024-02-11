@@ -16,7 +16,7 @@ export default async function Heading({
   className,
   color,
 }: HeadingProps) {
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
 
   const { primary_color } = settings.data;
   return (

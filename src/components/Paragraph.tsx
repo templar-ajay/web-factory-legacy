@@ -12,7 +12,7 @@ export default async function Paragraph({
   color,
   type,
 }: ParagraphProps) {
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
   const { secondary_color } = settings.data;
 
   return (

@@ -224,6 +224,7 @@ export type IframeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | IFrameSlice
   | CallToActionSlice
   | CardsSlice
   | SmallCardsSlice
@@ -450,6 +451,18 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   cta_background_color: prismic.ColorField;
+
+  /**
+   * Default CTA Style field in *Settings*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Filled
+   * - **API ID Path**: settings.default_cta_style
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  default_cta_style: prismic.SelectField<"Filled" | "Bordered", "filled">;
 
   /**
    * Meta Title field in *Settings*
@@ -923,6 +936,68 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *IFrame → Primary*
+ */
+export interface IFrameSliceDefaultPrimary {
+  /**
+   * iFrame field in *IFrame → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: i_frame.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  iframe: prismic.KeyTextField;
+
+  /**
+   * Height field in *IFrame → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: i_frame.primary.height
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  height: prismic.NumberField;
+
+  /**
+   * Max Width field in *IFrame → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: i_frame.primary.max_width
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  max_width: prismic.NumberField;
+}
+
+/**
+ * Default variation for IFrame Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IFrameSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IFrameSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *IFrame*
+ */
+type IFrameSliceVariation = IFrameSliceDefault;
+
+/**
+ * IFrame Shared Slice
+ *
+ * - **API ID**: `i_frame`
+ * - **Description**: IFrame
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IFrameSlice = prismic.SharedSlice<"i_frame", IFrameSliceVariation>;
 
 /**
  * Primary content in *Navigation → Items*
@@ -1468,6 +1543,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      IFrameSlice,
+      IFrameSliceDefaultPrimary,
+      IFrameSliceVariation,
+      IFrameSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultItem,
       NavigationSliceVariation,

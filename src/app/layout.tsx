@@ -45,7 +45,7 @@ type Props = {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
 
   console.log("settings", settings);
 
@@ -73,7 +73,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: "es-es" });
 
   const { gtm_id: GTM_ID } = settings.data;
 

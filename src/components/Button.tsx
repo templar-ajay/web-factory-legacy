@@ -3,11 +3,12 @@ import Iframe from "@/components/Iframe";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
 import { getSettings } from "@/app/utils";
+import { ColorField } from "@prismicio/client";
 
 type getButtonStylesProps = {
   variant: string;
-  cta_text_color?: string;
-  cta_background_color?: string;
+  cta_text_color?: string | ColorField;
+  cta_background_color?: string | ColorField;
 };
 
 function getButtonStyles({
@@ -47,13 +48,9 @@ export default async function Button({
   className,
   children,
 }: ButtonProps) {
-  const settings = await getSettings();
-  const {
-    cta_background_color,
-    cta_text_color,
-    default_iframe,
-    default_cta_style,
-  } = settings.data;
+  const settings = await getSettings({ lang: "es-es" });
+  const { cta_background_color, cta_text_color, default_cta_style } =
+    settings.data;
 
   const _variant =
     cta_style == "Default" || cta_style == undefined
@@ -69,7 +66,7 @@ export default async function Button({
     <div className="relative flex justify-center">
       {iframe?.id ? (
         <CTA
-          iframe={<Iframe iframe={iframe || default_iframe}></Iframe>}
+          iframe={<Iframe iframe={iframe || ""}></Iframe>}
           className={className}
           style={theButtonStyles}
         >

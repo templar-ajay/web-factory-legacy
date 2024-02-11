@@ -1,0 +1,40 @@
+{
+  "id": "i_frame",
+  "type": "SharedSlice",
+  "name": "IFrame",
+  "description": "IFrame",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "iframe": {
+          "type": "Text",
+          "config": {
+            "label": "iFrame",
+            "placeholder": ""
+          }
+        },
+        "height": {
+          "type": "Number",
+          "config": {
+            "label": "Height",
+            "placeholder": ""
+          }
+        },
+        "max_width": {
+          "type": "Number",
+          "config": {
+            "label": "Max Width",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

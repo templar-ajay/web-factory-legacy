@@ -1,8 +1,8 @@
 import { createClient } from "@/prismicio";
 
-export const getSettings = async () => {
+export const getSettings = async ({ lang }: { lang: string }) => {
   const client = createClient();
-  const settings = await client.getSingle("settings");
+  const settings = await client.getSingle("settings", { lang: lang });
   return settings;
 };
 

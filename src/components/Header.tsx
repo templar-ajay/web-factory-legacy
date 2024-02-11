@@ -7,11 +7,12 @@ import MobileNavigation from "./MobileNavigation";
 
 type HeaderParams = {
   uid: string;
+  lang: string;
 };
 
-export default async function Header({ uid }: HeaderParams) {
+export default async function Header({ uid, lang }: HeaderParams) {
   const header = await getHeader(uid);
-  const settings = await getSettings();
+  const settings = await getSettings({ lang: lang });
 
   const { secondary_color } = settings.data;
 
