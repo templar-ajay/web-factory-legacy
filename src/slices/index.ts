@@ -14,4 +14,5 @@ export const components = {
   small_background_image: dynamic(() => import("./SmallBackgroundImage")),
   small_cards: dynamic(() => import("./SmallCards")),
   tech_list: dynamic(() => import("./TechList")),
+  video_testimonial: dynamic(() => import("./VideoTestimonial")),
 };

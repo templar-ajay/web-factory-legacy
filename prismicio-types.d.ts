@@ -224,6 +224,7 @@ export type IframeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
 
 type PageDocumentDataSlicesSlice =
+  | VideoTestimonialSlice
   | TechListSlice
   | IFrameSlice
   | CallToActionSlice
@@ -526,13 +527,115 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Video Testimonials → Video Testimonials*
+ */
+export interface VideoTestimonialsDocumentDataVideoTestimonialsItem {
+  /**
+   * Thumbnail Image field in *Video Testimonials → Video Testimonials*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.video_testimonials[].thumbnail_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  thumbnail_image: prismic.ImageField<never>;
+
+  /**
+   * Name field in *Video Testimonials → Video Testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.video_testimonials[].name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * Short Review field in *Video Testimonials → Video Testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.video_testimonials[].short_review
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  short_review: prismic.RichTextField;
+
+  /**
+   * Video Iframe field in *Video Testimonials → Video Testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.video_testimonials[].video_iframe
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  video_iframe: prismic.KeyTextField;
+}
+
+/**
+ * Content for Video Testimonials documents
+ */
+interface VideoTestimonialsDocumentData {
+  /**
+   * Title field in *Video Testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * CTA Text (for each video) field in *Video Testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.cta_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * Video Testimonials field in *Video Testimonials*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonials.video_testimonials[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  video_testimonials: prismic.GroupField<
+    Simplify<VideoTestimonialsDocumentDataVideoTestimonialsItem>
+  >;
+}
+
+/**
+ * Video Testimonials document from Prismic
+ *
+ * - **API ID**: `video_testimonials`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type VideoTestimonialsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<VideoTestimonialsDocumentData>,
+    "video_testimonials",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | BackgroundOfSmallImagesDocument
   | FooterDocument
   | HeaderDocument
   | IframeDocument
   | PageDocument
-  | SettingsDocument;
+  | SettingsDocument
+  | VideoTestimonialsDocument;
 
 /**
  * Primary content in *CallToAction → Primary*
@@ -1585,6 +1688,51 @@ export type TechListSlice = prismic.SharedSlice<
   TechListSliceVariation
 >;
 
+/**
+ * Primary content in *VideoTestimonial → Primary*
+ */
+export interface VideoTestimonialSliceDefaultPrimary {
+  /**
+   * Select Video Testimonials field in *VideoTestimonial → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: video_testimonial.primary.select_video_testimonials
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  select_video_testimonials: prismic.ContentRelationshipField<"video_testimonials">;
+}
+
+/**
+ * Default variation for VideoTestimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type VideoTestimonialSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<VideoTestimonialSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *VideoTestimonial*
+ */
+type VideoTestimonialSliceVariation = VideoTestimonialSliceDefault;
+
+/**
+ * VideoTestimonial Shared Slice
+ *
+ * - **API ID**: `video_testimonial`
+ * - **Description**: VideoTestimonial
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type VideoTestimonialSlice = prismic.SharedSlice<
+  "video_testimonial",
+  VideoTestimonialSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1610,6 +1758,9 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
+      VideoTestimonialsDocument,
+      VideoTestimonialsDocumentData,
+      VideoTestimonialsDocumentDataVideoTestimonialsItem,
       AllDocumentTypes,
       CallToActionSlice,
       CallToActionSliceDefaultPrimary,
@@ -1658,6 +1809,10 @@ declare module "@prismicio/client" {
       TechListSliceDefaultItem,
       TechListSliceVariation,
       TechListSliceDefault,
+      VideoTestimonialSlice,
+      VideoTestimonialSliceDefaultPrimary,
+      VideoTestimonialSliceVariation,
+      VideoTestimonialSliceDefault,
     };
   }
 }

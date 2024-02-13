@@ -1,0 +1,77 @@
+{
+  "id": "video_testimonials",
+  "label": "Video Testimonials",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "strong,em,heading2"
+        }
+      },
+      "cta_text": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Text (for each video)",
+          "placeholder": ""
+        }
+      },
+      "video_testimonials": {
+        "type": "Group",
+        "config": {
+          "label": "Video Testimonials",
+          "fields": {
+            "thumbnail_image": {
+              "type": "Image",
+              "config": {
+                "label": "Thumbnail Image",
+                "constraint": {
+                  "width": 700,
+                  "height": 1080
+                },
+                "thumbnails": []
+              }
+            },
+            "name": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Name",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading3,strong,em"
+              }
+            },
+            "short_review": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Short Review",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,strong,em,hyperlink"
+              }
+            },
+            "video_iframe": {
+              "type": "Text",
+              "config": {
+                "label": "Video Iframe",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "video_testimonial",
+  "type": "SharedSlice",
+  "name": "VideoTestimonial",
+  "description": "VideoTestimonial",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "select_video_testimonials": {
+          "type": "Link",
+          "config": {
+            "label": "Select Video Testimonials",
+            "select": "document",
+            "customtypes": ["video_testimonials"]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

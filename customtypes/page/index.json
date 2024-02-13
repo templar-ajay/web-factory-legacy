@@ -74,6 +74,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "video_testimonial": {
+              "type": "SharedSlice"
+            },
             "tech_list": {
               "type": "SharedSlice"
             },
