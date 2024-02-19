@@ -28,6 +28,16 @@
         }
       },
       "items": {
+        "tech_icon": {
+          "type": "Image",
+          "config": {
+            "label": "Tech Icon",
+            "constraint": {
+              "width": 40
+            },
+            "thumbnails": []
+          }
+        },
         "tech_name": {
           "type": "Text",
           "config": {

@@ -1658,6 +1658,16 @@ export interface TechListSliceDefaultPrimary {
  */
 export interface TechListSliceDefaultItem {
   /**
+   * Tech Icon field in *TechList → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_list.items[].tech_icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  tech_icon: prismic.ImageField<never>;
+
+  /**
    * Tech Name field in *TechList → Items*
    *
    * - **Field Type**: Text
