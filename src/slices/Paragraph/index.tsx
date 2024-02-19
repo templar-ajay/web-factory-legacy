@@ -17,7 +17,7 @@ const getComponents: componentsType = ({
   return {
     paragraph: ({ children }: any) => (
       <Para
-        className=" font-montserrat font-light text-xl mobile:text-2xl md:text-3xl !leading-relaxed text-black-500 mt-8 mb-10"
+        className="text-center font-montserrat font-light text-lg mobile:text-xl md:text-2xl !leading-relaxed text-black-500 mt-8 mb-10"
         color={paragraph_color}
       >
         {children}
@@ -57,18 +57,23 @@ const Paragraph = ({
         ></div>
       )}
       <Bounded
-        className="max-w-3xl px-5 md:px-10"
+        className="max-w-2xl mx-auto px-5 md:px-10"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
         {slice.primary.title?.length && (
-          <Reveal width="100%">
-            <Heading as="h2" size="lg" className="w-fit py-2 mb-4" color="#fff">
+          <Reveal width="100%" delay={0.2}>
+            <Heading
+              as="h2"
+              size="lg"
+              className="mx-auto w-fit py-2 mb-4"
+              color="#fff"
+            >
               {slice.primary.title}
             </Heading>
           </Reveal>
         )}
-        <Reveal width="full" delay={0.3}>
+        <Reveal width="100%" delay={0.5}>
           <PrismicRichText
             field={slice.primary.content}
             components={components}

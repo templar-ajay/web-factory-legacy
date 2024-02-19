@@ -109,10 +109,12 @@ const Project = async ({
           ></div>
         )}
       </div>
-      <div className="w-full flex justify-center">
-        <Heading as="h2" size="lg" className="font-bold" color="#fff">
-          {slice.primary.super_title}
-        </Heading>
+      <div className="w-full flex justify-center mt-8 mobile:mt-16 md:mt-48">
+        <Reveal className="w-full text-center" width="100%" delay={0.1}>
+          <Heading as="h2" size="lg" className="font-bold" color="#fff">
+            {slice.primary.super_title}
+          </Heading>
+        </Reveal>
       </div>
       <Bounded
         data-slice-type={slice.slice_type}
@@ -120,20 +122,20 @@ const Project = async ({
       >
         <div className="relative flex-wrap lg:flex !gap-[4%] my-[80px]">
           <div className="w-full max-w-2xl mx-auto lg:w-[36%] mb-28 lg:mb-0 ">
-            <Reveal delay={0} width="100%">
+            <Reveal delay={0.3} className="mx-auto w-full">
               <PrismicRichText
                 field={slice.primary.title}
                 components={components}
               />
             </Reveal>
-            <Reveal delay={0.2}>
+            <Reveal delay={0.5}>
               <PrismicRichText
                 field={slice.primary.description}
                 components={components}
               />
             </Reveal>
             <div className="block w-fit mx-auto lg:mx-0">
-              <Reveal className="block" delay={0.5}>
+              <Reveal className="block" delay={0.7}>
                 <ProjectCTA
                   style={{ color: page_default_text_color || "#fff" }}
                 >
@@ -151,7 +153,7 @@ const Project = async ({
                 />
               </Reveal>
               <div className="absolute lg:scale-80 max-w-[10rem] sm:max-w-[15rem] lg:max-w-[20rem]  z-20 left-0 -bottom-48 mobile:-bottom-20">
-                <Reveal delay="1">
+                <Reveal delay="0.5">
                   <PrismicNextImage
                     className="w-full h-full rounded-2xl"
                     field={slice.primary.mobile_size_project_screenshot}

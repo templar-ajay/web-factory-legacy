@@ -1633,6 +1633,16 @@ export type SmallCardsSlice = prismic.SharedSlice<
  */
 export interface TechListSliceDefaultPrimary {
   /**
+   * Theme Color field in *TechList → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tech_list.primary.theme_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  theme_color: prismic.ColorField;
+
+  /**
    * Title field in *TechList → Primary*
    *
    * - **Field Type**: Text

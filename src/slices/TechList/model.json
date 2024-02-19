@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "theme_color": {
+          "type": "Color",
+          "config": {
+            "label": "Theme Color",
+            "placeholder": ""
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
