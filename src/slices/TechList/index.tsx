@@ -29,7 +29,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
       )}
       <Bounded as="div">
         {slice.primary.title?.length && (
-          <Reveal width="100%" delay={0.2}>
+          <Reveal width="100%">
             <Heading
               as="h2"
               size="lg"
@@ -43,7 +43,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
         <div className="px-5 opacity-70 flex flex-wrap gap-x-20 gap-y-10 align-middle justify-center">
           {slice.items.map(({ tech_icon, tech_name }, index) => (
             <div key={index} className="mx-2 mobile:mx-0">
-              <Reveal>
+              <Reveal delay={index * 0.1 || 0.1}>
                 <Heading as="h2" size="md" color="#fff" className="RamRam">
                   <PrismicNextImage
                     field={tech_icon}
