@@ -129,15 +129,17 @@ const Hero = ({
             components={components}
           />
         </div>
-        <div className="block text-center pt-8 md:pt-12">
-          <PrismicNextLink
-            className="inline-block transition-all duration-75 hover:-translate-y-2 !leading-snug rounded-full border-[1px] border-solid px-[50px] mobile:px-[65px] md:px-[100px] py-[12.5px] mobile:py-[15px] md:py-[25px] text-xl mobile:text-2xl md:text-3xl"
-            field={slice.primary.cta_link}
-            style={{ color: page_default_text_color }}
-          >
-            {slice.primary.cta_text}
-          </PrismicNextLink>
-        </div>
+        {slice.primary.cta_text?.length && (
+          <div className="block text-center pt-8 md:pt-12">
+            <PrismicNextLink
+              className="inline-block transition-all duration-75 hover:-translate-y-2 !leading-snug rounded-full border-[1px] border-solid px-[50px] mobile:px-[65px] md:px-[100px] py-[12.5px] mobile:py-[15px] md:py-[25px] text-xl mobile:text-2xl md:text-3xl"
+              field={slice.primary.cta_link}
+              style={{ color: page_default_text_color }}
+            >
+              {slice.primary.cta_text}
+            </PrismicNextLink>
+          </div>
+        )}
       </Bounded>
     </div>
   );
