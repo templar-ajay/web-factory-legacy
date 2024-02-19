@@ -43,7 +43,7 @@ const Navigation = ({
           {slice.items.map(({ name, link }) => (
             <PrismicNextLink
               // old="text-2xl"
-              className="navigation-item text-5xl block text-center py-8"
+              className="navigation-item text-2xl mobile:text-3xl md:text-4xl lg:text-5xl block text-center py-2 mobile:py-4"
               field={link}
               style={{ color: navigation_items_color }}
             >

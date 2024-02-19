@@ -67,7 +67,7 @@ const MobileNavigation = ({
                 />
               </div>
             )}
-            <div className="cta-mobile">
+            <div className="cta-mobile mt-5">
               <PrismicNextLink field={cta_link}>
                 <div className="block arrow-box text-lg">
                   <div
@@ -76,13 +76,9 @@ const MobileNavigation = ({
                         navigation_items_color || secondary_color || "#fff",
                     }}
                     // old="text-2xl"
-                    className="arrow-button block text-5xl border-solid border-[1px] rounded-full px-12 py-5"
+                    className="arrow-button block text-xl mobile:text-2xl md:text-3xl lg:text-4xl border-solid border-[1px] rounded-full px-6 mobile:px-8 lg:px-12 pt-2 mobile:pt-4 pb-3 mobile:pb-5"
                   >
                     {cta_message}
-                    {/* <FontAwesomeIcon
-                      className="arrow-icon big ml-3 w-3 inline-block scale-100 hover:scale-150"
-                      icon={faArrowRight}
-                    /> */}
                   </div>
                 </div>
               </PrismicNextLink>
