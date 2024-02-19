@@ -23,6 +23,18 @@
 				"__TYPE__": "FieldContent",
 				"value": "brick",
 				"type": "Text"
+			},
+			"cta_text": {
+				"__TYPE__": "FieldContent",
+				"value": "highest",
+				"type": "Text"
+			},
+			"cta_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
 			}
 		},
 		"items": []

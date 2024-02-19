@@ -1191,6 +1191,26 @@ export interface ParagraphSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   theme_color: prismic.ColorField;
+
+  /**
+   * CTA Text field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
 }
 
 /**
