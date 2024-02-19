@@ -28,6 +28,18 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
         ></div>
       )}
       <Bounded as="div">
+        {slice.primary.title?.length && (
+          <Reveal width="100%" delay={0.2}>
+            <Heading
+              as="h2"
+              size="lg"
+              className="mx-auto w-fit py-2 mb-8 mobile:mb-16 md:mb-24 text-center"
+              color="#fff"
+            >
+              {slice.primary.title}
+            </Heading>
+          </Reveal>
+        )}
         <div className="px-5 opacity-70 flex flex-wrap gap-x-20 gap-y-10 align-middle justify-center">
           {slice.items.map(({ tech_icon, tech_name }, index) => (
             <div key={index} className="mx-2 mobile:mx-0">
