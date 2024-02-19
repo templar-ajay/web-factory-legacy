@@ -17,7 +17,7 @@ const getComponents: componentsType = ({
   return {
     paragraph: ({ children }: any) => (
       <Para
-        className="text-center font-montserrat font-light text-lg mobile:text-xl md:text-2xl !leading-relaxed text-black-500 mt-8 mb-10"
+        className="font-montserrat font-light text-lg mobile:text-xl md:text-2xl !leading-relaxed text-black-500 mt-8 mb-10"
         color={paragraph_color}
       >
         {children}
