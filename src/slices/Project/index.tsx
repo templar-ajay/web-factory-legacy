@@ -138,6 +138,7 @@ const Project = async ({
             <div className="block w-fit mx-auto lg:mx-0">
               <Reveal className="block" delay={0.7}>
                 <ProjectCTA
+                  field={slice.primary.cta_link}
                   style={{ color: page_default_text_color || "#fff" }}
                 >
                   {slice.primary.cta_text}

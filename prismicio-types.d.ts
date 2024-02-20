@@ -1345,6 +1345,16 @@ export interface ProjectSliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * CTA Link field in *Project → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.primary.cta_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
    * Theme Color field in *Project → Primary*
    *
    * - **Field Type**: Color

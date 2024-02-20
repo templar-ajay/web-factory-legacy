@@ -44,6 +44,15 @@
             "placeholder": ""
           }
         },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
         "theme_color": {
           "type": "Color",
           "config": {
