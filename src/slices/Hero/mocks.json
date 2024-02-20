@@ -67,6 +67,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "#297a0e",
 				"type": "Color"
+			},
+			"after_cta_text": {
+				"__TYPE__": "FieldContent",
+				"value": "happy",
+				"type": "Text"
+			},
+			"after_cta_text_delay": {
+				"__TYPE__": "FieldContent",
+				"value": "77",
+				"type": "Number"
 			}
 		},
 		"items": [

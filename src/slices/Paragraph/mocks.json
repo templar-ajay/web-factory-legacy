@@ -35,6 +35,16 @@
 					"__TYPE__": "ExternalLink",
 					"url": "https://slicemachine.dev"
 				}
+			},
+			"after_cta_text": {
+				"__TYPE__": "FieldContent",
+				"value": "table",
+				"type": "Text"
+			},
+			"after_cta_text_delay": {
+				"__TYPE__": "FieldContent",
+				"value": "57",
+				"type": "Number"
 			}
 		},
 		"items": []

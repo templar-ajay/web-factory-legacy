@@ -1016,6 +1016,26 @@ export interface HeroSliceDefaultPrimary {
   cta_link: prismic.LinkField;
 
   /**
+   * After CTA Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  after_cta_text: prismic.KeyTextField;
+
+  /**
+   * After CTA Text Delay (in seconds) field in *Hero → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.after_cta_text_delay
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  after_cta_text_delay: prismic.NumberField;
+
+  /**
    * Theme Color field in *Hero → Primary*
    *
    * - **Field Type**: Color
@@ -1223,6 +1243,26 @@ export interface ParagraphSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
+
+  /**
+   * After CTA Text field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.after_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  after_cta_text: prismic.KeyTextField;
+
+  /**
+   * After CTA Text Delay (in seconds) field in *Paragraph → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: paragraph.primary.after_cta_text_delay
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  after_cta_text_delay: prismic.NumberField;
 }
 
 /**

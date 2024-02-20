@@ -49,6 +49,20 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "after_cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "After CTA Text",
+            "placeholder": ""
+          }
+        },
+        "after_cta_text_delay": {
+          "type": "Number",
+          "config": {
+            "label": "After CTA Text Delay (in seconds)",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
