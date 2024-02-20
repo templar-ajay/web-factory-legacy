@@ -91,7 +91,7 @@ export default async function RootLayout({
           display.variable,
           montserrat.variable,
           hero.variable,
-          "overflow-x-hidden"
+          "overflow-x-hidden selection:text-black selection:bg-white"
         )}
       >
         <GlobalStyles

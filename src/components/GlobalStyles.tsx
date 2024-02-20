@@ -14,6 +14,9 @@ const GlobalStyles = styled.div<{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  strong::selection {
+    -webkit-text-fill-color: black;
+  }
   ul > li::before {
     background-color: ${(props) => props.$strongGradientColor1 || "#000000"};
   }
