@@ -64,14 +64,6 @@
             "placeholder": ""
           }
         },
-        "email_icon": {
-          "type": "Image",
-          "config": {
-            "label": "email_icon",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "email": {
           "type": "Text",
           "config": {

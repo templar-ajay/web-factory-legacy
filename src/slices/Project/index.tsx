@@ -109,7 +109,7 @@ const Project = async ({
           ></div>
         )}
       </div>
-      <div className="w-full flex justify-center mt-8 mobile:mt-16 md:mt-48">
+      <div className="w-full flex justify-center mt-24 md:mt-48">
         <Reveal className="w-full text-center" width="100%" delay={0.1}>
           <Heading as="h2" size="lg" className="font-bold" color="#fff">
             {slice.primary.super_title}
@@ -117,6 +117,7 @@ const Project = async ({
         </Reveal>
       </div>
       <Bounded
+        className="pt-0"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >

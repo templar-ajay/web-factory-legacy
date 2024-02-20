@@ -712,16 +712,6 @@ export interface CallToActionSliceDefaultPrimary {
   action_button_background: prismic.ColorField;
 
   /**
-   * email_icon field in *CallToAction → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.email_icon
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  email_icon: prismic.ImageField<never>;
-
-  /**
    * email field in *CallToAction → Primary*
    *
    * - **Field Type**: Text

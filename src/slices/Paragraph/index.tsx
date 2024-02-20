@@ -51,9 +51,13 @@ const Paragraph = ({
     <div className="relative">
       {slice.primary.theme_color && (
         <div
-          className="w-full h-full -z-50 absolute top-0"
+          className="w-full h-[90%] -z-50 absolute top-[10%]"
           style={{
-            backgroundImage: `linear-gradient(${slice.primary.theme_color}, ${slice.primary.theme_color} 18%, ${slice.primary.theme_color} 58%, rgba(0, 0, 0, 0))`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0), ${
+              slice.primary.theme_color + "99"
+            } 25%,  ${slice.primary.theme_color + "D9"} 50%, ${
+              slice.primary.theme_color + "99"
+            } 70%, rgba(0, 0, 0, 0))`,
           }}
         ></div>
       )}

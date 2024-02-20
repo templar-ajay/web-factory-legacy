@@ -111,10 +111,6 @@ const CallToAction = ({
             className="py-5"
             field={slice.primary.link_to_email}
           >
-            <PrismicNextImage
-              className="inline-block mr-3"
-              field={slice.primary.email_icon}
-            />
             {slice.primary.email}
           </PrismicNextLink>
         </Reveal>
