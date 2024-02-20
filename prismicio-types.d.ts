@@ -467,6 +467,28 @@ interface SettingsDocumentData {
   default_cta_style: prismic.SelectField<"Filled" | "Bordered", "filled">;
 
   /**
+   * Bold Gradient Color 1 field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.bold_gradient_color_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bold_gradient_color_1: prismic.ColorField;
+
+  /**
+   * Bold Gradient Color 2 field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.bold_gradient_color_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bold_gradient_color_2: prismic.ColorField;
+
+  /**
    * Meta Title field in *Settings*
    *
    * - **Field Type**: Text

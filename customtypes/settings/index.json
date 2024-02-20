@@ -67,6 +67,20 @@
           "default_value": "Filled"
         }
       },
+      "bold_gradient_color_1": {
+        "type": "Color",
+        "config": {
+          "label": "Bold Gradient Color 1",
+          "placeholder": ""
+        }
+      },
+      "bold_gradient_color_2": {
+        "type": "Color",
+        "config": {
+          "label": "Bold Gradient Color 2",
+          "placeholder": ""
+        }
+      },
       "meta_title": {
         "type": "Text",
         "config": {

@@ -1,4 +1,5 @@
-import type { Metadata, ResolvingMetadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
+import StyledComponentsRegistry from "@/lib/registry";
 
 import "./globals.css";
 import clsx from "clsx";
@@ -11,6 +12,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { Providers } from "@/app/providers";
 import { TrackingHeadScript } from "@phntms/next-gtm";
 import { getSettings } from "@/app/utils";
+import GlobalStyles from "@/components/GlobalStyles";
 
 const body = Questrial({
   subsets: ["latin"],
@@ -75,7 +77,11 @@ export default async function RootLayout({
 }) {
   const settings = await getSettings({ lang: "es-es" });
 
-  const { gtm_id: GTM_ID } = settings.data;
+  const {
+    gtm_id: GTM_ID,
+    bold_gradient_color_1,
+    bold_gradient_color_2,
+  } = settings.data;
 
   return (
     <html lang="en">
@@ -88,9 +94,16 @@ export default async function RootLayout({
           "overflow-x-hidden"
         )}
       >
-        <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
-        <Providers>{children}</Providers>
-        <PrismicPreview repositoryName={repositoryName} />
+        <GlobalStyles
+          $strongGradientColor1={bold_gradient_color_1 || "#FF5733"}
+          $strongGradientColor2={bold_gradient_color_2 || "#FFA500"}
+        >
+          <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
+          <Providers>
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          </Providers>
+          <PrismicPreview repositoryName={repositoryName} />
+        </GlobalStyles>
       </body>
     </html>
   );
