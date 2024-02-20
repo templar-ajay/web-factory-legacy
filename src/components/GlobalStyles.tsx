@@ -6,6 +6,7 @@ const GlobalStyles = styled.div<{
   $strongGradientColor2?: string;
 }>`
   strong {
+    text-shadow: none;
     background: linear-gradient(
       to right,
       ${(props) => props.$strongGradientColor1 || "#ffffff"},
@@ -13,6 +14,15 @@ const GlobalStyles = styled.div<{
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-shadow: 1px 1px 2px black;
   }
   strong::selection {
     -webkit-text-fill-color: black;
