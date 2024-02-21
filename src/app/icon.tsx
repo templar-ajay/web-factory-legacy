@@ -21,7 +21,8 @@ export default async function Icon() {
       <div
         style={{
           fontSize: 24,
-          background: "black",
+          background: "transparent",
+          boxShadow: "1px 1px 2px black",
           width: "100%",
           height: "100%",
           display: "flex",
