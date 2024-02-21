@@ -20,6 +20,23 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-left: 1.5rem;
+}
+
+li::before {
+  /* content: "•"; */
+  content: "";
+  background: url(/WebFactoryFavicon.png);
+  box-shadow: 1px 1px 2px black;
+  background-size: cover;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -1.5rem;
+  margin-right: 0.5rem;
+}
+
 .arrow-box:hover .arrow-button {
   transform: translateY(-10px);
   transform-style: preserve-3d;

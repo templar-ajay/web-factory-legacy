@@ -27,6 +27,14 @@ const getComponents: componentsType = ({
     strong: ({ children }) => (
       <strong className="font-semibold">{children}</strong>
     ),
+    listItem: ({ children }) => (
+      <li
+        style={{ color: paragraph_color }}
+        className="font-montserrat font-light text-lg mobile:text-xl md:text-2xl !leading-relaxed text-black-500 my-8"
+      >
+        {children}
+      </li>
+    ),
   };
 };
 
@@ -62,7 +70,7 @@ const Paragraph = ({
         ></div>
       )}
       <Bounded
-        className="max-w-2xl mx-auto px-5 md:px-10"
+        className="link_underline max-w-2xl mx-auto px-5 md:px-10"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >

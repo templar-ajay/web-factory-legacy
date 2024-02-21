@@ -27,8 +27,15 @@ const GlobalStyles = styled.div<{
   strong::selection {
     -webkit-text-fill-color: black;
   }
-  ul > li::before {
+  /* ul > li::before {
     background-color: ${(props) => props.$strongGradientColor1 || "#000000"};
+  } */
+  .link_underline a {
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    text-decoration-color: ${(props) =>
+      props.$strongGradientColor1 || "#FF5733"} !important;
+    cursor: pointer;
   }
 `;
 export default GlobalStyles;
