@@ -70,7 +70,7 @@ const Paragraph = ({
         ></div>
       )}
       <Bounded
-        className="link_underline max-w-2xl mx-auto px-5 md:px-10"
+        className=" max-w-2xl mx-auto px-5 md:px-10"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
@@ -86,7 +86,7 @@ const Paragraph = ({
             </Heading>
           </Reveal>
         )}
-        <Reveal width="100%" delay={0.5}>
+        <Reveal width="100%" className="link_underline" delay={0.5}>
           <PrismicRichText
             field={slice.primary.content}
             components={components}
