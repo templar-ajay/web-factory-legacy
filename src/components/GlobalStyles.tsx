@@ -24,6 +24,15 @@ const GlobalStyles = styled.div<{
   p {
     text-shadow: 1px 1px 2px black;
   }
+  h1::selection,
+  h2::selection,
+  h3::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  p::selection {
+    text-shadow: none;
+  }
   strong::selection {
     -webkit-text-fill-color: black;
   }

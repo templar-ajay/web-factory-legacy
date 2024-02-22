@@ -102,7 +102,7 @@ const Project = async ({
         )}
         {slice.primary.theme_color && (
           <div
-            className="h-full w-full absolute top-24 -z-40 ggg"
+            className="h-full w-full absolute top-48 -z-40 ggg"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), ${slice.primary.theme_color} 18%, ${slice.primary.theme_color} 58%, rgba(0, 0, 0, 0))`,
             }}
