@@ -4,6 +4,7 @@ import styled from "styled-components";
 const GlobalStyles = styled.div<{
   $strongGradientColor1?: string;
   $strongGradientColor2?: string;
+  $linkUnderlineColor?: string;
 }>`
   strong {
     text-shadow: none;

@@ -81,6 +81,7 @@ export default async function RootLayout({
     gtm_id: GTM_ID,
     bold_gradient_color_1,
     bold_gradient_color_2,
+    link_underline_color,
   } = settings.data;
 
   return (
@@ -97,6 +98,7 @@ export default async function RootLayout({
         <GlobalStyles
           $strongGradientColor1={bold_gradient_color_1 || "#FF5733"}
           $strongGradientColor2={bold_gradient_color_2 || "#FFA500"}
+          $linkUnderlineColor={link_underline_color || "#FF5733"}
         >
           <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
           <Providers>

@@ -81,6 +81,13 @@
           "placeholder": ""
         }
       },
+      "link_underline_color": {
+        "type": "Color",
+        "config": {
+          "label": "Link Underline Color",
+          "placeholder": ""
+        }
+      },
       "meta_title": {
         "type": "Text",
         "config": {

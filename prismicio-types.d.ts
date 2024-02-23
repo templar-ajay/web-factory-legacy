@@ -489,6 +489,17 @@ interface SettingsDocumentData {
   bold_gradient_color_2: prismic.ColorField;
 
   /**
+   * Link Underline Color field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.link_underline_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  link_underline_color: prismic.ColorField;
+
+  /**
    * Meta Title field in *Settings*
    *
    * - **Field Type**: Text
