@@ -14,7 +14,10 @@ export default async function Page({ params }: { params: Params }) {
   const client = createClient();
   const page = await client
     .getByUID("page", params.uid, { lang: "es-es" })
-    .catch(() => notFound());
+    .catch((err) => {
+      console.log("err", err);
+      notFound();
+    });
 
   const settings = await getSettings({ lang: "es-es" });
 
@@ -104,7 +107,7 @@ export async function generateMetadata({
 
 export async function generateStaticParams() {
   const client = createClient();
-  const pages = await client.getAllByType("page", { lang: "es-es" });
+  const pages = await client.getAllByType("page");
 
   return pages.map((page) => {
     return { uid: page.uid };
