@@ -16,6 +16,16 @@ const getComponents: componentsType = ({
   paragraph_color = "inherit",
 }: any) => {
   return {
+    heading2: ({ children }: any) => (
+      <Heading
+        as="h2"
+        size="lg"
+        className="mx-auto w-fit py-2 mb-4"
+        color="#fff"
+      >
+        {children}
+      </Heading>
+    ),
     paragraph: ({ children }: any) => (
       <Para
         className="font-montserrat font-light text-lg mobile:text-xl md:text-2xl !leading-relaxed text-black-500 mt-8 mb-10"
@@ -76,14 +86,10 @@ const Paragraph = ({
       >
         {slice.primary.title?.length && (
           <Reveal width="100%" delay={0.2}>
-            <Heading
-              as="h2"
-              size="lg"
-              className="mx-auto w-fit py-2 mb-4"
-              color="#fff"
-            >
-              {slice.primary.title}
-            </Heading>
+            <PrismicRichText
+              field={slice.primary.title}
+              components={components}
+            />
           </Reveal>
         )}
         <Reveal width="100%" className="link_underline" delay={0.5}>
