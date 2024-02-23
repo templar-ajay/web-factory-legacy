@@ -1197,12 +1197,12 @@ export interface ParagraphSliceDefaultPrimary {
   /**
    * Title field in *Paragraph → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: paragraph.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  title: prismic.RichTextField;
 
   /**
    * Content field in *Paragraph → Primary*

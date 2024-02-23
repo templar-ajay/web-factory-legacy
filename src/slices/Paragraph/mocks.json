@@ -20,9 +20,15 @@
 				"type": "Color"
 			},
 			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "brick",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Represent"
+						}
+					}
+				]
 			},
 			"cta_text": {
 				"__TYPE__": "FieldContent",
