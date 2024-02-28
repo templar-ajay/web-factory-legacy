@@ -64,17 +64,17 @@
             "placeholder": ""
           }
         },
-        "email": {
+        "after_action_button_text": {
           "type": "Text",
           "config": {
-            "label": "email",
+            "label": "After Action Button Text",
             "placeholder": ""
           }
         },
-        "link_to_email": {
+        "after_action_button_link": {
           "type": "Link",
           "config": {
-            "label": "link_to_email",
+            "label": "After Action Button Link",
             "placeholder": "",
             "select": null
           }

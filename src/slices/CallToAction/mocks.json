@@ -26,18 +26,6 @@
 					"url": "https://prismic.io"
 				}
 			},
-			"email": {
-				"__TYPE__": "FieldContent",
-				"value": "swimming",
-				"type": "Text"
-			},
-			"link_to_email": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
 			"call_text_color": {
 				"__TYPE__": "FieldContent",
 				"value": "#1baa8d",
@@ -62,6 +50,18 @@
 				"__TYPE__": "FieldContent",
 				"value": "#7b3b9a",
 				"type": "Color"
+			},
+			"after_action_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "dance",
+				"type": "Text"
+			},
+			"after_action_button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
 			}
 		},
 		"items": []

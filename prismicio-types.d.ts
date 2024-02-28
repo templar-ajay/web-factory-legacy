@@ -745,24 +745,24 @@ export interface CallToActionSliceDefaultPrimary {
   action_button_background: prismic.ColorField;
 
   /**
-   * email field in *CallToAction → Primary*
+   * After Action Button Text field in *CallToAction → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.email
+   * - **API ID Path**: call_to_action.primary.after_action_button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  email: prismic.KeyTextField;
+  after_action_button_text: prismic.KeyTextField;
 
   /**
-   * link_to_email field in *CallToAction → Primary*
+   * After Action Button Link field in *CallToAction → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.link_to_email
+   * - **API ID Path**: call_to_action.primary.after_action_button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link_to_email: prismic.LinkField;
+  after_action_button_link: prismic.LinkField;
 
   /**
    * text color field in *CallToAction → Primary*
