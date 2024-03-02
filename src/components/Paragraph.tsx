@@ -3,14 +3,12 @@ type ParagraphProps = {
   children: React.ReactNode;
   className: string;
   color: string;
-  type?: string;
 };
 
 export default async function Paragraph({
   children,
   className,
   color,
-  type,
 }: ParagraphProps) {
   const settings = await getSettings({ lang: "es-es" });
   const { secondary_color } = settings.data;
